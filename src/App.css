@@ -1,38 +1,489 @@
-.App {
-  text-align: center;
+@charset "utf-8";
+/* CSS Document */
+*, ::after, ::before {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'FuturaBoldfont';
+  src: url('./fonts/FuturaBoldfont.eot');
+  src: url('./fonts/FuturaBoldfont.eot') format('embedded-opentype'),
+       url('./fonts/FuturaBoldfont.woff2') format('woff2'),
+       url('./fonts/FuturaBoldfont.woff') format('woff'),
+       url('./fonts/FuturaBoldfont.ttf') format('truetype'),
+       url('./fonts/FuturaBoldfont.svg#FuturaBoldfont') format('svg');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'futuramediumbt';
+  src: url('./fonts/futuramediumbt.eot');
+  src: url('./fonts/futuramediumbt.eot') format('embedded-opentype'),
+       url('./fonts/futuramediumbt.woff2') format('woff2'),
+       url('./fonts/futuramediumbt.woff') format('woff'),
+       url('./fonts/futuramediumbt.ttf') format('truetype'),
+       url('./fonts/futuramediumbt.svg#futuramediumbt') format('svg');
+}
+a, abbr, acronym, address, applet, big, blockquote, body, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, ul, var {
+border: 0;
+font-style: inherit;
+font-weight: inherit;
+margin: 0;
+outline: none !important;
+padding: 0;
+vertical-align: baseline;
+font-family: 'futuramediumbt';
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+margin: 0;
+padding: 0;
+background: #000 url(../public/images/background.png) no-repeat;
+background-size: cover;
+width: 100%;
+font-family: 'futuramediumbt';
+font-size:17px;
+color:#fff;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 20px 0;
+}
+a{
+	color:inherit;
+	outline: none !important;
+}
+a:hover{
+	color:inherit;
+	text-decoration:none;
+}
+button,
+button:focus{
+	outline: none !important;
+}
+ol {
+	padding-left: 0;
+}
+ol li {
+	list-style: inherit;
+}
+ul li {
+	list-style: none;
+}
+ul {
+	padding-left: 0;
+}
+li, ul {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+	max-width:100%;
+	border: none;
+	outline: none;
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+
+.navbar .nav-item{
+  margin-right: 20px;
+}
+.navbar .nav-item .nav-link{
+  color: #fff !important;
+  font-family: 'FuturaBoldfont';
+  font-size: 22px;
+}
+.btn-aount1{
+  background: #fff !important;
+  color: #000 !important;
+  font-family: 'futuramediumbt';
+  border-radius: 50px !important;
+  padding:5px 16px !important;
+}
+.btn-aount1 .icon-name1{
+  width: 44px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.btn-aount1 span{
+  font-family: 'FuturaBoldfont';
+  font-size: 20px;
+}
+.main-haeding{
+  font-family: 'FuturaBoldfont';
+  font-size: 90px;
+}
+.link-gopage a{
+  text-decoration: none;
+}
+.link-gopage li{
+  margin: 0 80px;
+}
+.link-gopage ul{
+  position: relative;
+  z-index: 2;
+}
+.link-gopage ul:after{
+  position: absolute;
+  content: "";
+  width: 44%;
+  height: 1px;
+  background: #767676;
+  top: 14px;
+  margin: auto;
+
+}
+.link-gopage li .count-div{
+   width: 30px;
+   height: 30px;
+   display: grid;
+   align-content: center;
+   justify-content: center;
+   border-radius: 50%;
+   overflow: hidden;
+   background: #fff !important;
+   color: #000 !important;
+   margin: auto;
+   margin-bottom: 10px;
+   position: relative;
+  z-index: 2;
+}
+.link-gopage li.active .count-div{
+  background: #FFA908 !important;
+  color: #fff !important;
+}
+
+.link-gopage li h5{
+  color: #fff;
+}
+.comon-from{
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+
+}
+.links-nm{
+  color: #FFA908;
+}
+.main-forms{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255,12%);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 50px 0;
+}
+.box{
+  background: #fff;
+  color: #000;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding: 0 20px 0 13px;
+  height: 52px;
+  border-radius: 5px;
+  border: solid 1px #8B0707;
+  
+}
+.box svg{
+  width: 25px;
+  height: 25px;
+}
+.inside-div-cm .form-group{
+  margin-bottom: 20px;
+}
+.inside-div-cm .form-group .form-control{
+  height: 52px;
+  border: solid 1px #8B0707;
+}
+.inside-div-cm .form-group .form-control:focus{
+  box-shadow: none;
+}
+.inside-div-cm .form-group .form-control::placeholder{
+  color: #000;
+}
+
+.link-gopage li.active h5{
+  color: #FFA908;
+}
+
+footer{
+  background: #000;
+  display: inline-block;
+  width: 100%;
+}
+footer h3{
+  font-family: 'FuturaBoldfont';
+  font-size: 30px;
+}
+footer p{
+  font-family: 'FuturaBoldfont';
+  font-size: 25px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  width:100%;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding:0;
+}
+
+.no-js .inputfile + label {
+  display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+.inputfile-1 + label {
+  color: #000;
+  background-color: #fff;
+}
+
+.inside-div-cm h3,
+.inside-div-cm p{
+  color: #fff;
+}
+.inside-div-cm h3{
+  font-family: 'FuturaBoldfont';
+  font-size: 30px;
+}
+.inside-div-cm p{
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.inside-div-cm .form-select{
+  height: 52px;
+  padding-left: 13px !important;
+  border: solid 1px #8B0707;
+}
+.inside-div-cm{
+  margin-bottom: 55px;
+}
+.footer-lg{
+  display: inline-block;
+  width: 280px;
+  margin: auto;
+}
+
+.blur {
+  background: url(../public/images/background.png)
+    no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(50px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+}
+.comon-color-div1 label{
+  color: #fff;
+}
+.comon-color-div1 h5{
+  font-size: 15px;
+}
+.comon-color-div1 .color-dvm{
+  background: #fff;
+  border: solid 1px #8B0707;
+  border-radius: 5px;
+  padding:10px 20px;
+  margin-top: 10px;
+}
+.comon-color-div1 .color-dvm .form-control{
+  max-width: 27px;
+  max-height: 77px;
+  border-radius: 50% !important;
+  border: none !important;
+  padding: 0 !important;
+  overflow: hidden;
+  display: grid;
+}
+
+.comon-opcity-div{
+  display: inline-block;
+  width: 100%;
+  background: rgba(255, 255, 255, 12%);
+  padding: 30px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.btn-opt-add{
+  display: table;
+  width: 100%;
+  background: rgba(255, 255, 255, 12%) !important;
+  border-radius: 50px !important;
+  height: 40px;
+  text-align: center;
+  color: #fff !important;
+  margin-top: 20px;
+}
+.socal-div1{
+  display:grid;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  background: rgba(255, 255, 255, 12%) !important;
+  height: 230px;
+   text-align: center;
+}
+.socal-div1 .comon-count1{
+
+
+  background: rgb(255,169,8);
+  background: linear-gradient(176deg, rgba(255,169,8,1) 0%, rgba(123,4,128,1) 100%);
+
+color: #fff !important;
+border-radius: 50px !important;
+padding: 8px 20px;
+margin-top: 18px;
+border: none !important;
+}
+.comon-opcity-div label,
+.comon-opcity-div span{
+  color: #fff;
+}
+.pre-btn{
+  color: #fff !important;
+  font-size: 25px !important;
+  font-family: 'FuturaBoldfont';
+}
+.comon-opcity-div span{
+  font-size: 15px;
+}
+.comon-opcity-div label{
+  font-size: 19px;
+  margin-bottom: 8px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.next-btn{
+  background: rgb(255,169,8);
+background: linear-gradient(97deg, rgba(255,169,8,1) 0%, rgba(123,4,128,1) 100%);
+  color: #fff !important;
+border-radius: 50px !important;
+padding: 5px 30px !important;
+border: none !important;
+min-width:170px ;
+justify-content: space-between;
+display: flex !important;
+font-family: 'FuturaBoldfont';
+font-size: 25px !important;
+margin-left: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.next-btn svg{
+  width: 30px;
+  height: 30px;
+}
+.tog-btn{
+  text-decoration: none;
+ 
+}
+.tog-btn .toggle-bn{
+  width: 60px;
+  border-radius: 50px;
+  display: inline-block;
+  background: #fff;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+.tog-btn .toggle-bn::before{
+  width: 22px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 22px;
+  background: #40AA6D;
+  content: "";
+  left: 5px;
+  top: 4px;
+  position: absolute;
+}
+.onnb .toggle-bn::before{
+  left: inherit !important;
+  right: 5px;
+}
+.pr{
+  color: #bbb !important;
+  font-size: 18px !important;
+}
+.pb{
+  color: #fff !important;
+  font-size: 18px !important;
+}
+.onnb .pr{
+  color: #fff !important;
+}
+.onnb .pb{
+  color: #bbb !important;
+}
+.close-1{
+  color: #fff !important;
+}
+.close-1 svg{
+  width: 25px;
+  height: 25px;
+}
+.test-p{
+  font-size: 16px !important;
+}
+.comon-input .inpy-div{
+  width: 80%;
+}
+.comon-input label{
+  width: 40%;
+}
+.comon-input h5{
+  color: #fff;
+  margin-bottom: 0;
+}
+.comon-input label{
+  font-size: 16px;
+}
+.inpy-div .form-control{
+  border-right: 0 !important;
+  border-radius: 5px 0 0 5px;
+}
+.inpy-div .form-select{
+  border-left:#707070 solid 1px !important;
+  border-radius: 0 5px 5px 0;
+  width: 86px;
 }
