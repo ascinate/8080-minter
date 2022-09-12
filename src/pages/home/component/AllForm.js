@@ -331,9 +331,10 @@ const AllForm=()=>{
                             </div>
                             <div className="right-pre-div d-flex align-items-center justify-content-between">
                                 
-                                <Button type='submit' className="btn pre-btn">Submit</Button>
+                                <Button type='button' className="btn pre-btn">Save</Button>
+                                <Button type='submit' className="btn next-btn">Next <span> <BsArrowRight/> </span></Button>
                                 
-                                <NavLink to="/allowlist" className="btn next-btn"> Next <span> <BsArrowRight/> </span> </NavLink>
+
                             </div>
                     </div>
                 </div>
