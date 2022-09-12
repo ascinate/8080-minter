@@ -369,6 +369,12 @@ footer p{
   height: 230px;
    text-align: center;
 }
+.form-group .invalid-field-warning {
+  font-size: 17px !important;
+  color:rgb(255 0 0 / 90%) !important;
+  display: block;
+  white-space: nowrap;
+}
 .show-main-div{
   display: none;
 }

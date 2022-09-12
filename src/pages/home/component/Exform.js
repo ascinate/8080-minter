@@ -11,51 +11,49 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Exform=()=> {
 
-    const initialValues = { projectname: "", projectsymbol:"", email: "", password: "" };
-    const [formValues, setFormValues] = useState(initialValues);
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormValues({ ...formValues, [name]: value });
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      setFormErrors(validate(formValues));
-      setIsSubmit(true);
-    };
-  
-    useEffect(() => {
-      console.log(formErrors);
-      if (Object.keys(formErrors).length === 0 && isSubmit) {
-        console.log(formValues);
-      }
-    }, [formErrors]);
-    const validate = (values) => {
-      const errors = {};
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-      if (!values.projectname) {
-        errors.projectname = "Project Name is required!";
-      }
-      if (!values.projectsymbol) {
-        errors.projectsymbol = "Project Symbol is required!";
-      }
-      if (!values.email) {
-        errors.email = "Email is required!";
-      } else if (!regex.test(values.email)) {
-        errors.email = "This is not a valid email format!";
-      }
-      if (!values.password) {
-        errors.password = "Password is required";
-      } else if (values.password.length < 4) {
-        errors.password = "Password must be more than 4 characters";
-      } else if (values.password.length > 10) {
-        errors.password = "Password cannot exceed more than 10 characters";
-      }
-      return errors;
-    };
+  const initialValues = { username: "", email: "", password: "" };
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors]);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (!values.username) {
+      errors.username = "Username is required!";
+    }
+    if (!values.email) {
+      errors.email = "Email is required!";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format!";
+    }
+    if (!values.password) {
+      errors.password = "Password is required";
+    } else if (values.password.length < 4) {
+      errors.password = "Password must be more than 4 characters";
+    } else if (values.password.length > 10) {
+      errors.password = "Password cannot exceed more than 10 characters";
+    }
+    return errors;
+  };
+
 
   return (
     <div className="container">
@@ -70,12 +68,12 @@ const Exform=()=> {
             <div className="row">
                 <div className="col-lg-6">
                     <div className="form-group">
-                        <input type="text" name="projectname" className="form-control" 
+                        <input type="text" name="username" className="form-control" 
                         placeholder="Project Name"
-                        value={formValues.projectname}
-                        onChange={handleChange} />
+                        value={formValues.username}
+                       onChange={handleChange} />
                         
-                        <p>{formErrors.projectname}</p>
+                        <p>{formErrors.username}</p>
                     </div>
                 </div>
                 <div className="col-lg-6">
@@ -162,7 +160,6 @@ const Exform=()=> {
                         <NavLink to="/" className="btn pre-btn"> Preview </NavLink>
                     </div>
                     <div className="right-pre-div d-flex align-items-center justify-content-between">
-                        <input type="submit" className="btn " value="Save"/>
                         <button className="fluid ui pre-btn btn blue">Submit</button>
                         
                         <NavLink to="/allowlist" className="btn next-btn"> Next <span> <BsArrowRight/> </span> </NavLink>

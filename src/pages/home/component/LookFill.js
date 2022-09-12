@@ -48,6 +48,8 @@ const LookFill=()=>{
                                 <h5 className="m-0">
                                     {colorPri}
                                 </h5> 
+
+                                
                                 <input type="color" value={colorPri} name="pricolor" className="form-control form-control-color" onChange={(e)=>setPriColor(e.target.value)} />
                             </div>
                         </div>
