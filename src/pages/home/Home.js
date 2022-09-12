@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
@@ -38,7 +38,14 @@ $(document).ready(function(){
 })(document, window, 0);
 });
 
+
+
 function Home(){
+    document.title ="Free Mint - Home"
+    const [color, setColor]= useState('#424FE6');
+    const [colorSec, setSecColor]= useState('#A742E6');
+    const [colorPri, setPriColor]= useState('#E64242');
+   
     return(
         <>
            <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
@@ -180,9 +187,9 @@ function Home(){
                                                     <label> Primary Colour </label>
                                                     <div className="color-dvm d-flex justify-content-between align-items-center">
                                                         <h5 className="m-0">
-                                                        #E64242
-                                                        </h5>
-                                                        <input type="color" className="form-control form-control-color" id="exampleColorInput" value="#E64242" title="Choose your color"/>
+                                                           {colorPri}
+                                                        </h5> 
+                                                        <input type="color" value={colorPri} className="form-control form-control-color" onChange={(e)=>setPriColor(e.target.value)} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,9 +199,9 @@ function Home(){
                                                     <label> Secondary Colour </label>
                                                     <div className="color-dvm d-flex justify-content-between align-items-center">
                                                         <h5 className="m-0">
-                                                        #A742E6
+                                                        {colorSec}
                                                         </h5>
-                                                        <input type="color" className="form-control form-control-color" id="exampleColorInput" value="#A742E6" title="Choose your color"/>
+                                                        <input type="color" value={colorSec} className="form-control form-control-color" onChange={(e)=>setSecColor(e.target.value)}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -204,9 +211,9 @@ function Home(){
                                                     <label> Tertiary Colour </label>
                                                     <div className="color-dvm d-flex justify-content-between align-items-center">
                                                         <h5 className="m-0">
-                                                        #424FE6
+                                                        {color}
                                                         </h5>
-                                                        <input type="color" className="form-control form-control-color" id="exampleColorInput" value="#424FE6" title="Choose your color"/>
+                                                        <input type="color" value={color} className="form-control form-control-color" onChange={(e)=>setColor(e.target.value)}/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -342,7 +349,7 @@ function Home(){
                                                 </div>
                                                 <div className="right-pre-div d-flex align-items-center justify-content-between">
                                                     <NavLink to="/" className="btn pre-btn"> Save </NavLink>
-                                                    <NavLink to="/setpsn8" className="btn next-btn"> Next <span> <BsArrowRight/> </span> </NavLink>
+                                                    <NavLink to="/allowlist" className="btn next-btn"> Next <span> <BsArrowRight/> </span> </NavLink>
                                                 </div>
                                         </div>
                                     </div>

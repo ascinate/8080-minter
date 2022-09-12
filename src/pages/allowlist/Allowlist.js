@@ -1,23 +1,26 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight,BsX } from "react-icons/bs";
 import $ from "jquery";
 
 
-$(document).ready(function(){
-   
-    $("#toogle-btn").click(function(){
-        $(".tog-btn").toggleClass("onnb");
-    });
 
-});
+function Allowlist(){
+    
+    document.title = "Free Mint - Allowlist"
 
-function SetpsN8(){
+    const [isActive, setActive] = useState("false");
+
+    const handleToggle = () => {
+      setActive(!isActive);
+    };
+
+
     return(
         <>
            <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
-                
+              <div className={isActive ? "show-main" : null}>
                 <div className="comon-div">
                   <div className="container">
                         <h1 className="main-haeding text-center text-white"> Launch Mint </h1>
@@ -157,6 +160,8 @@ function SetpsN8(){
                                     </div>
 
 
+
+
                                    
                                     
 
@@ -168,8 +173,14 @@ function SetpsN8(){
                         </div>
                   </div>
                 </div>
+              </div>  
+
+              <button className="btn btn-danger" onClick={handleToggle}>
+            Change Name
+         </button>
+
            </div>
         </>
     )
 };
-export default SetpsN8;
+export default Allowlist;
