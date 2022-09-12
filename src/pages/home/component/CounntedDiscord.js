@@ -1,6 +1,6 @@
 import React from "react";
 
-function CounntedDiscord(){
+const CounntedDiscord=()=>{
 
     return(
         <>

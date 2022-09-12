@@ -2,26 +2,27 @@ import React,{useState} from "react";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 
-function ProjectIcon(){
-    const [file, setIconFile] = useState("");
+const FilesLogo=()=>{
+    const [file, setFile] = useState("");
 
-    const [filechange, fileUpload]= useState("Project Icon (500x500)");
+     const [fileChangeLogo, handleLogo]= useState("Project Logo (png)");
 
-    function handleIconUpload(event) {
-        setIconFile(event.target.files["0"]);
-        fileUpload(event.target.value)
+    function handleUpload(event) {
+      setFile(event.target.files[0]);
+      handleLogo(event.target.value)
+  
     }
 
     return(
         <>
         <div className="box">
             <input type="file" name="iconFile" id="file-1" className="inputfile inputfile-1" 
-            onChange={handleIconUpload} />
+            onChange={handleUpload} />
             <label for="file-1">
-             <span> {filechange} </span></label>
+             <span> {fileChangeLogo} </span></label>
             <BiUpload/>
         </div>
         </>
     )
 };
-export default ProjectIcon;
+export default FilesLogo;

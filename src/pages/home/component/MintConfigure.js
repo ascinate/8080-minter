@@ -1,6 +1,6 @@
 import React from "react";
 
-function MintConfigure(){
+const MintConfigure=()=>{
 
     return(
         <>
@@ -14,14 +14,14 @@ function MintConfigure(){
                         <div className="col-lg-6">
                             <div className="form-group">
                                 <label> Total Supply </label>
-                                <input type="text" className="form-control" required/>
+                                <input name="supply" type="text" className="form-control" required/>
                             </div>
                         </div>
 
                         <div className="col-lg-6">
                             <div className="form-group">
                                 <label> Owner Reserves </label>
-                                <input type="text" className="form-control" required/>
+                                <input name="owner" type="text" className="form-control" required/>
                             </div>
                         </div>
 
@@ -38,7 +38,7 @@ function MintConfigure(){
                         <div className="col-lg-12">
                             <div className="form-group">
                                 <label> Metadata Base URI [Post-Reveal] </label>
-                                <input type="text" className="form-control" required/>
+                                <input type="text" name="baseurl" className="form-control" required/>
                             </div>
                         </div>
                         

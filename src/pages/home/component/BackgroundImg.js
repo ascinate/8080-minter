@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 
-function BackgroundImg(){
+const BackgroundImg=()=>{
     const [fileBack, setBackFile] = useState("");
 
     const [fileChangeBack, handleBack]= useState("Background image (1920 x1080)");

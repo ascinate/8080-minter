@@ -1,6 +1,6 @@
 import React from "react";
 
-function CounnectdSocal(){
+const CounnectdSocal=()=>{
 
     return(
         <>

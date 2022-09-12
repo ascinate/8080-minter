@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 
-function Contract(){
+const Contract=()=>{
     return(
         <>
         <div className="inside-div-cm col-lg-9 mx-auto d-block">

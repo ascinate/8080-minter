@@ -2,18 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
-import BasicInfo from "./BasicInfo";
-import FilesLogo from "./FilesLogo";
-import Contract from "./Contract";
-import LookFill from "./LookFill";
-import MintConfigure from "./MintConfigure";
-import Withdraal from "./Withdraal";
-import CounnectdSocal from "./CounnectdSocal";
-import CounntedDiscord from "./CounntedDiscord";
+import FormSection from "./component/FormSection";
+import Exform from "./component/Exform";
 
-function Home(){
-    document.title ="Free Mint - Home"
-    
+const Home=()=>{
+    document.title ="8080 Mint - Home"
+
     return(
         <>
            <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
@@ -55,36 +49,7 @@ function Home(){
                              <div className="blur"></div>
                         
                              <div className="main-forms">
-                                <form method="get" action="name">
-
-                                    <BasicInfo/>
-
-                                    <Contract/>
-
-                                    <LookFill/>
-
-                                    <MintConfigure/>
-
-
-                                    <Withdraal/>
-
-                                    <CounnectdSocal/>
-
-                                    <CounntedDiscord/>
-
-                                    <div className="inside-div-cm col-lg-9 mx-auto d-block">
-                                        <div className="d-md-flex align-items-center justify-content-between">
-                                                <div className="next-div">
-                                                    <NavLink to="/" className="btn pre-btn"> Preview </NavLink>
-                                                </div>
-                                                <div className="right-pre-div d-flex align-items-center justify-content-between">
-                                                    <input type="submit" className="btn pre-btn" value="Save"/>
-                                                    <NavLink to="/allowlist" className="btn next-btn"> Next <span> <BsArrowRight/> </span> </NavLink>
-                                                </div>
-                                        </div>
-                                    </div>
-
-                                </form>
+                                 <Exform/>
                             </div>
                         </div>
                   </div>

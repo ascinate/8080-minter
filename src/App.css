@@ -353,6 +353,12 @@ footer p{
   text-align: center;
   color: #fff !important;
   margin-top: 20px;
+  transition: all 0.5s;
+}
+.btn-opt-add:hover{
+  background: rgb(255,169,8);
+  background: linear-gradient(176deg, rgba(255,169,8,1) 0%, rgba(123,4,128,1) 100%) !important;
+  border: none !important;
 }
 .socal-div1{
   display:grid;
@@ -362,6 +368,9 @@ footer p{
   background: rgba(255, 255, 255, 12%) !important;
   height: 230px;
    text-align: center;
+}
+.show-main-div{
+  display: none;
 }
 .socal-div1 .comon-count1{
 

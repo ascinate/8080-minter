@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import BackgroundImg from "./BackgroundImg";
 import FilesLogo from "./FilesLogo";
 
-function LookFill(){
+const LookFill=()=>{
     const [color, setColor]= useState('#424FE6');
     const [colorSec, setSecColor]= useState('#A742E6');
     const [colorPri, setPriColor]= useState('#E64242');
@@ -19,7 +19,7 @@ function LookFill(){
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="form-group">
-                            <input type="text" className="form-control" placeholder="URL Slug" required/>
+                            <input type="text" name="url" className="form-control" placeholder="URL Slug"/>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ function LookFill(){
                                 <h5 className="m-0">
                                     {colorPri}
                                 </h5> 
-                                <input type="color" value={colorPri} className="form-control form-control-color" onChange={(e)=>setPriColor(e.target.value)} />
+                                <input type="color" value={colorPri} name="pricolor" className="form-control form-control-color" onChange={(e)=>setPriColor(e.target.value)} />
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ function LookFill(){
                                 <h5 className="m-0">
                                 {colorSec}
                                 </h5>
-                                <input type="color" value={colorSec} className="form-control form-control-color" onChange={(e)=>setSecColor(e.target.value)}/>
+                                <input type="color" value={colorSec} name="secondcolor" className="form-control form-control-color" onChange={(e)=>setSecColor(e.target.value)}/>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ function LookFill(){
                                 <h5 className="m-0">
                                 {color}
                                 </h5>
-                                <input type="color" value={color} className="form-control form-control-color" onChange={(e)=>setColor(e.target.value)}/>
+                                <input type="color" value={color} name="tertcolor" className="form-control form-control-color" onChange={(e)=>setColor(e.target.value)}/>
                             </div>
                         </div>
                     </div>
