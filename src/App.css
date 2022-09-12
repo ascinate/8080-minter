@@ -228,12 +228,12 @@ footer p{
 }
 
 .inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
+  width:100%;
+  height:100%;
   overflow: hidden;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
+  opacity: 0;
 }
 
 .inputfile + label {
