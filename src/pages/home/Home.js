@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
-import AllForm from "./component/AllForm";
+import BasicForm from "./components/BasicForm";
+
 
 const Home=()=>{
     document.title ="8080 Mint - Home"
@@ -48,7 +49,7 @@ const Home=()=>{
                              <div className="blur"></div>
                         
                              <div className="main-forms">
-                                 <AllForm/>
+                                 <BasicForm/>
                             </div>
                         </div>
                   </div>

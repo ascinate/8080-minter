@@ -6,12 +6,15 @@ import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { Button } from 'semantic-ui-react';
-
 import ValidForm from 'react-valid-form-component';
 
 
 
-const AllForm=()=>{
+
+
+
+const BasicForm=()=>{
+
 
     const [color, setColor]= useState('#424FE6');
     const [colorSec, setSecColor]= useState('#A742E6');
@@ -40,7 +43,7 @@ const AllForm=()=>{
 
     return(
         <>
-        <ValidForm  method="post">
+        <ValidForm>
 
                  <div className="inside-div-cm col-lg-9 mx-auto d-block">
                         <h3>  Basic Info  </h3>
@@ -52,11 +55,14 @@ const AllForm=()=>{
                                     <input type="text"
                                      className="form-control" 
                                      placeholder="Project Name"
-                                     name="validation"
-                                     id="validation"
-                                     required
-                                     minLength="3"
-                                     maxLength="50" />
+                                     name="projectname"
+                                        id="validation"
+                                        required
+                                        /* validation rules */
+                                        minLength="3"
+                                        maxLength="50"
+                                     />
+                                     
                                 </div>
 
                              
@@ -124,7 +130,13 @@ const AllForm=()=>{
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <input type="text" name="url" className="form-control" placeholder="URL Slug"/>
+                                            <input type="text"  className="form-control" placeholder="URL Slug"
+                                            name="url"
+                                            id="validation"
+                                            required
+                                            minLength="3"
+                                            maxLength="50"
+                                            />
                                         </div>
                                     </div>
 
@@ -199,14 +211,25 @@ const AllForm=()=>{
                                 <div className="col-lg-6">
                                     <div className="form-group">
                                         <label> Total Supply </label>
-                                        <input name="supply" type="text" className="form-control" required/>
+                                        <input  type="text" className="form-control" 
+                                        name="supply"
+                                        id="validation"
+                                        required
+                                        minLength="3"
+                                        maxLength="50"/>
                                     </div>
                                 </div>
 
                                 <div className="col-lg-6">
                                     <div className="form-group">
                                         <label> Owner Reserves </label>
-                                        <input name="owner" type="text" className="form-control" required/>
+                                        <input  type="text" className="form-control"
+                                        name="owner"
+                                        id="validation"
+                                        required
+                                        minLength="3"
+                                        maxLength="50"
+                                        />
                                     </div>
                                 </div>
 
@@ -217,13 +240,25 @@ const AllForm=()=>{
                                         <span> Leave blank for mints with instant reveal.</span>
                                         </div>
                                         
-                                        <input type="text" className="form-control" required/>
+                                        <input type="text" className="form-control" 
+                                        name="metadatauRI"
+                                        id="validation"
+                                        required
+                                        minLength="3"
+                                        maxLength="50"
+                                        />
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         <label> Metadata Base URI [Post-Reveal] </label>
-                                        <input type="text" name="baseurl" className="form-control" required/>
+                                        <input type="text" className="form-control" 
+                                        name="metadatabaseuRI"
+                                        id="validation"
+                                        required
+                                        minLength="3"
+                                        maxLength="50"
+                                        />
                                     </div>
                                 </div>
                                 
@@ -248,6 +283,11 @@ const AllForm=()=>{
                                     <div className="form-group">
                                         <label> Wallet Address </label>
                                         <input type="text" className="form-control" 
+                                        name="wallet"
+                                        id="validation"
+                                        required
+                                        minLength="3"
+                                        maxLength="50"
                                      
                                     />
                                     </div>
@@ -256,7 +296,9 @@ const AllForm=()=>{
                                 <div className="col-lg-4">
                                     <div className="form-group">
                                         <label> Percentage Split </label>
-                                        <input type="text" className="form-control" 
+                                        <input type="text" className="form-control"
+                                        name="percentage"
+                                      
                                         />
                                     </div>
                                 </div>
@@ -343,4 +385,4 @@ const AllForm=()=>{
         </>
     )
 };
-export default AllForm;
+export default BasicForm;
