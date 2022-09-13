@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { NavLink } from "react-router-dom";
 import AllDraft from "./DraftApi";
 
 const Draft=()=>{
@@ -11,7 +12,7 @@ const Draft=()=>{
 
         {
             workData.map((curElem) =>{
-                const { id, titel, time, actionst, progess} = curElem;
+                const { id, titel, time, link, progess} = curElem;
                 return(
                     <>
                    
@@ -45,7 +46,7 @@ const Draft=()=>{
                                                         <h5> Actions </h5>
                                                     </div>
                                                     <div className="dft-ps">
-                                                        <h5 className="complte-lc"> {actionst} </h5>
+                                                        <NavLink to={link} className="complte-lc"> COMPLETE & LAUNCH </NavLink>
                                                     </div>
                                             </div>
                                     </div>

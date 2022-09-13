@@ -611,6 +611,13 @@ margin-left: 10px;
   font-family: 'FuturaBoldfont';
   text-align: center;
   margin: 0;
+  display: table;
+  margin: auto;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.complte-lc:hover{
+  color: #fff;
 }
 .launged-div-main{
   display: inline-block;

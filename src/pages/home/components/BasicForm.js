@@ -359,7 +359,7 @@ const BasicForm=()=>{
                                     </figure>
             
                                     <button type="button" className="btn comon-count1">
-                                        Connect Discord
+                                        Connect Twitter
                                     </button>
                                 </div>
                             </div>

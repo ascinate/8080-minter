@@ -6,6 +6,7 @@ const AllDraft =[
       time:"31st of December, 2021",
       actionst:"COMPLETE & LAUNCH",
       progess:"50%",
+      link:"/managemints",
     
       
     },
@@ -16,6 +17,7 @@ const AllDraft =[
         time:"31st of December, 2021",
         actionst:"COMPLETE & LAUNCH",
         progess:"50%",
+        link:"/managemints",
     },
 
     {
@@ -24,6 +26,7 @@ const AllDraft =[
       time:"31st of December, 2021",
       actionst:"COMPLETE & LAUNCH",
       progess:"50%",
+      link:"/managemints",
     },
 
     {
@@ -32,6 +35,7 @@ const AllDraft =[
         time:"31st of December, 2021",
         actionst:"COMPLETE & LAUNCH",
         progess:"50%",
+        link:"/managemints",
     },
 
     {
@@ -40,6 +44,7 @@ const AllDraft =[
         time:"31st of December, 2021",
         actionst:"COMPLETE & LAUNCH",
         progess:"50%",
+        link:"/managemints",
     },
 
 
