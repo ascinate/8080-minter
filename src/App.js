@@ -8,6 +8,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import Home from './pages/home/Home';
 import Allowlist from './pages/allowlist/Allowlist';
+import MangeMints from "./pages/manage-tabs/MangeMints";
 import Header from './Header';
 import Footer from './Footer';
 
@@ -20,6 +21,8 @@ function App() {
             <Routes>
                 <Route exact="true" path="/" element={<Home/>}/>
                 <Route exact="true" path="/allowlist" element={<Allowlist/>}/>
+                <Route exact="true" path="/mangemints" element={<MangeMints/>}/>
+                
             </Routes>
           <Footer/>
       </Router>

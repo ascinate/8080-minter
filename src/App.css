@@ -3,7 +3,7 @@
 *, ::after, ::before {
   box-sizing: border-box;
 }
-
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @font-face {
   font-family: 'FuturaBoldfont';
   src: url('./fonts/FuturaBoldfont.eot');
@@ -523,9 +523,236 @@ margin-left: 10px;
   border-radius: 0 5px 5px 0;
   width: 86px;
 }
+.tabs-section .nav-pills .nav-link{
+  font-size: 22px;
+  background: #4c4c4c;
+  font-family: 'futuramediumbt';
+  color: #919191;
+  margin: 0 5px;
+  width:200px;
+}
+.tabs-section .nav-pills .nav-item:first-child .nav-link{
+    border-radius: 15px 0 0 15px !important;
+    
+
+}
+.tabs-section .nav-pills .nav-item:last-child .nav-link{
+  border-radius:0 15px 15px 0 !important;
+}
+.tabs-section .nav-pills .nav-link.active, 
+.tabs-section .nav-pills .show>.nav-link{
+    background: #353535;
+    font-family: 'FuturaBoldfont';
+    color: #fff !important;
+    
+    
+}
+.dft-titel{
+  color: #FFA908;
+  font-family: 'FuturaBoldfont';
+}
+.dft-titel span{
+   color: #D1D1D1;
+   font-size: 16px;
+   font-family: 'futuramediumbt';
+}
+.right-cm-df{
+  color: #D1D1D1;
+}
+.pogress-div{
+  display: inline-block;
+  width: 100%;
+}
+.dft-top{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  background: #4c4c4c;
+  text-align: center;
+  height: 71px;
+  color: #fff;
+  border-bottom: solid 2px #fff;
+  
+}
+.dft-ps{
+  display: inline-block;
+  height:81px;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 30px;
+
+}
+.progress-bar{
+  background-color: #8ec484 !important;
+  border: solid 1px #fff !important;
+}
+
+.comon-items-draft .row > div:first-child .dft-top{
+  border-radius: 10px 0 0 0;
+}
+.comon-items-draft .row > div:first-child .dft-ps{
+  border-radius: 0 0 0 10px;
+}
+
+.comon-items-draft .row > div:last-child .dft-top{
+  border-radius: 0 10px 0 0;
+}
+.comon-items-draft .row > div:last-child .dft-ps{
+  border-radius: 0 10px 0 0;
+}
+
+.prog-div span{
+  color: #fff;
+  margin-top: 10px;
+}
+.complte-lc{
+  color: #FFA908;
+  font-family: 'FuturaBoldfont';
+  text-align: center;
+  margin: 0;
+}
+.launged-div-main{
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.lon-content-box{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  z-index: 2;
+  padding: 80px;
+  background: rgba(255, 255, 255,20%);
+  overflow: hidden;
+  border-radius: 15px;
+
+
+  
+}
+.total-lonched-div-main > div:first-child{
+  background: #1b1b1b;
 
 
 
+}
+.total-lonched-div-main > div:first-child .lon-content-box{
+  background: inherit;
+}
+
+.total-lonched-div-main > div:first-child .blur{
+  display: none;
+}
+.launged-div-main .blur{
+  background-position: -40px -30px;
+  filter: blur(10px);
+  opacity: 0.8;
+
+
+  
+
+
+
+  
+}
+.long-titel{
+  color: #FFA908;
+  font-family: 'FuturaBoldfont';
+  margin:0 0 10px 0;
+}
+.author-dl{
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.author-dl a{
+  color: #FFA908;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+.author-dl a:hover{
+  color: #fff;
+}
+.lon-time{
+  color: #D1D1D1;
+  text-align: right;
+  display: block;
+}
+.filed-edit li{
+   position: relative;
+   margin: 0 12px;
+
+}
+.filed-edit{
+  justify-content: flex-end;
+}
+.filed-edit li:after{
+  position: absolute;
+  right: -11px;
+  top: 10px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #fff;
+
+}
+.filed-edit li:last-child{
+  margin-right: 0;
+}
+.filed-edit li:last-child::after{
+  display: none;
+}
+
+.filed-edit li a{
+  text-decoration: none;
+  color: #fff;
+  color: #FFA908;
+}
+.comon-lounched1 h3{
+  color: #FFA908;
+  font-family: 'FuturaBoldfont';
+}
+.total-lonched-div-main{
+  display: inline-block;
+}
+.total-lonched-div-main > div:first-child .loung-deta{
+  display: inline-block;
+  background: #363636;
+  width: 100%;
+  border-radius: 10px;
+  padding:0 30px;
+  margin: 30px 0;
+}
+
+.loung-deta{
+  display: inline-block;
+  /* background: rgba(255, 255, 255, 30%); */
+  width: 100%;
+  border-radius: 10px;
+  padding:0 30px;
+  margin: 30px 0;
+
+  background: rgb(217,117,90);
+background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%, rgba(83,65,59,1) 97%);
+}
+.loung-deta .row > div{
+  padding: 30px 0;
+}
+.loung-deta .row > div:first-child{
+  border-right: solid 1px #fff;
+}
+.comon-lounched1 h2{
+  color: #fff;
+  font-family: 'FuturaBoldfont';
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;
