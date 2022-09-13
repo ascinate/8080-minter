@@ -6,7 +6,8 @@ import Darft from "./components/Draft";
 import Launched from "./components/Launched";
 
 
-const MangeMints=()=>{
+const ManageMints=()=>{
+    document.title ="8080 Mint - Manage Mints"
     return(
         <>
         <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
@@ -54,4 +55,4 @@ const MangeMints=()=>{
         </>
     )
 };
-export default MangeMints;
+export default ManageMints;
