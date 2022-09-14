@@ -8,7 +8,7 @@ import ValidForm from 'react-valid-form-component';
 
 function Pricing(){
     
-    document.title = "Free Mint - Allowlist"
+    document.title = "Free Mint - Pricing"
 
     const [isActive, setActive] = useState("false");
 
