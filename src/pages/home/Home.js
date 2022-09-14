@@ -28,7 +28,7 @@ const Home=()=>{
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/">
+                                    <NavLink to="/allowlist">
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">2</span>
                                             <h5> Allowlists </h5>
@@ -36,7 +36,7 @@ const Home=()=>{
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/">
+                                    <NavLink to="/pricing">
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">3</span>
                                             <h5> Pricing </h5>

@@ -461,36 +461,16 @@ margin-left: 10px;
   position: relative;
   cursor: pointer;
 }
-.tog-btn .toggle-bn::before{
-  width: 22px;
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  height: 22px;
-  background: #40AA6D;
-  content: "";
-  left: 5px;
-  top: 4px;
-  position: absolute;
-}
-.onnb .toggle-bn::before{
-  left: inherit !important;
-  right: 5px;
-}
+
 .pr{
-  color: #bbb !important;
+  color: #fff !important;
   font-size: 18px !important;
 }
 .pb{
-  color: #fff !important;
+  color: #bbb !important;
   font-size: 18px !important;
 }
-.onnb .pr{
-  color: #fff !important;
-}
-.onnb .pb{
-  color: #bbb !important;
-}
+
 .close-1{
   color: #fff !important;
 }
@@ -500,6 +480,12 @@ margin-left: 10px;
 }
 .test-p{
   font-size: 16px !important;
+}
+.inpy-div{
+  position: relative;
+}
+span.invalid-field-warning{
+  font-size: 0 !important;
 }
 .comon-input .inpy-div{
   width: 80%;
@@ -821,6 +807,185 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 } */
 .comon-lounched1 h2{
   color: #fff;
+  font-family: 'FuturaBoldfont';
+}
+
+
+
+.toggle-bn::before{
+  left: inherit !important;
+  right: 5px !important;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 22px;
+  background: #40AA6D;
+  content: "";
+  width: 22px;
+  top: 4px;
+  position: absolute;
+
+}
+.show-main-up-allowlist .toggle-bn::before{
+  left: 5px !important;
+  right: inherit !important;
+  
+}
+
+.show-main-up-allowlist .pr{
+  color: #bbb !important;
+}
+.show-main-up-allowlist .pb{
+  color: #fff !important;
+}
+.allow-register{
+  display:inline-block;
+  width: 100%;
+}
+.right-disable-div{
+  width: 50%;
+  margin-bottom: 0 !important;
+}
+.right-disable-div p{
+  width:80%;
+  margin: 0;
+}
+.right-disable-div .form-control{
+  width: 40%;
+}
+.comon-input-div{
+  margin: 15px 0;
+  display: inline-block;
+  width: 100%;
+}
+.comon-input-div h5{
+  color: #fff;
+  margin-bottom: 12px;
+  font-family: 'FuturaBoldfont';
+  font-size: 22px;
+}
+.comon-input-div .from-group{
+  display: flex;
+  align-items: center;
+}
+.comon-input-div .from-group label{
+  width: 28%;
+  font-size: 16px;
+  
+}
+.comon-input-div .from-group .form-control{
+  border: solid 1px #8B0707;
+  width: 78%;
+  height: 52px;
+}
+
+.comon-input-div .from-group .form-control:focus{
+  box-shadow: none !important;
+}
+.comon-input-div .inpy-div{
+   width: 78%;
+}
+.comon-input-div .inpy-div .form-control{
+  width: 90%;
+}
+.list-btn-div1 ul{
+  display: flex;
+}
+.list-btn-div1 ul li{
+  position: relative;
+  margin-right: 22px;
+}
+.list-btn-div1 ul li:after{
+  position: absolute;
+  content: "";
+  width: 7px;
+  height:7px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  top:8px;
+  right: -16px;
+  background: #fff;
+
+  
+}
+.list-btn-div1 ul li:last-child{
+  margin-right: 0;
+}
+.list-btn-div1 ul li:last-child::after{
+  display: none;
+}
+.list-btn-div1 li a{
+  color: #FFA908;
+  text-decoration: none;
+  font-family: 'FuturaBoldfont';
+  transition: all 0.5s;
+}
+.list-btn-div1 li a:hover{
+  color: #fff;
+}
+.full-sel > div{
+  width: 100%;
+}
+.full-sel .searchWrapper{
+  background: #fff;
+  border: none !important;
+  height: 52px;
+  width: 100%;
+}
+.searchWrapper input{
+  height: 34px;
+}
+.comon-multi{
+  width: 78%;
+}
+.comon-multi .searchWrapper{
+  background: #fff;
+  border: none !important;
+  height: 52px;
+  width: 100%;
+}
+.chip,
+.highlightOption,
+.multiSelectContainer li:hover{
+  background: #7d1c4c !important;
+}
+
+.show-main-register-allowlist{
+  display: block;
+}
+.show-main-up-allowlist .show-main-register-allowlist{
+   display: none;
+}
+.public-div-show{
+  display: none;
+}
+.show-main-up-allowlist .public-div-show{
+  display: block ;
+}
+
+.show-main-register-allowlist .toggle-bn::before{
+  left: 6px !important;
+  right: inherit !important;
+  background: #7d1c4c !important;
+}
+
+.list-btn-div1{
+  display: block;
+}
+.show-main-register-allowlist .list-btn-div1{
+  display: none;
+}
+.show-main-register-allowlist .right-disable-div p{
+   color: #666;
+}
+.comon-pricing-div h3{
+  color: #FFA908;
+}
+.comon-pricing-div h5{
+  color: #fff;
+}
+.comon-pricing-div label{
   font-family: 'FuturaBoldfont';
 }
 @media screen and (min-width: 1400px) {

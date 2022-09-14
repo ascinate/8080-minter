@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight,BsX } from "react-icons/bs";
-import $ from "jquery";
-
+import UploadAllowlist from "./components/UploadAllowlist";
+import ValidForm from 'react-valid-form-component';
 
 
 function Allowlist(){
@@ -19,8 +19,8 @@ function Allowlist(){
 
     return(
         <>
-           <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
-              <div className={isActive ? "show-main" : null}>
+           <div className="comon-all-body hmepage-1 allowist-p1 float-start w-100 mt-3">
+              <div className={isActive ? "show-main-up-allowlist" : null}>
                 <div className="comon-div">
                   <div className="container">
                         <h1 className="main-haeding text-center text-white"> Launch Mint </h1>
@@ -37,7 +37,7 @@ function Allowlist(){
                                     </NavLink>
                                 </li>
                                 <li className="active">
-                                    <NavLink to="/">
+                                    <NavLink to="/allowlist">
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">2</span>
                                             <h5> Allowlists </h5>
@@ -45,7 +45,7 @@ function Allowlist(){
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/">
+                                    <NavLink to="/pricing">
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">3</span>
                                             <h5> Pricing </h5>
@@ -58,7 +58,7 @@ function Allowlist(){
                              <div className="blur"></div>
                         
                              <div className="main-forms">
-                                <form method="get" action="name">
+                                <ValidForm>
                                    
                                     <div className="inside-div-cm col-lg-9 mx-auto d-block">
                                         <h3> Allowlist Registration   </h3>
@@ -72,80 +72,115 @@ function Allowlist(){
                                                 <div className="col-lg-6">
                                                     <div className="form-group d-flex align-items-center mb-0">
                                                        
-                                                       <input type="text" className="form-control" placeholder="0xymintregistration" required/>
+                                                       <input type="text" className="form-control" placeholder="0xymintregistration" 
+                                                        name="link"
+                                                        id="validation"
+                                                        required
+                                                        minLength="3"
+                                                        maxLength="50"
+                                                       />
                                                        <span> .8080.tools </span>
 
                                                     </div>
                                                 </div>
 
                                             </div>
+
+                                           
+                                           
+                                           
                                         </div>
                                     </div>
 
                                     <div className="inside-div-cm col-lg-9 mx-auto d-block mb-3">
+                                    
                                         <div className="comon-opcity-div">
+
                                             <div className="d-flex align-items-center justify-content-between">
-                                                <a id="toogle-btn" className="tog-btn">
+                                                <button className="btn tog-btn" onClick={handleToggle}>
                                                    <div className="d-flex align-items-center">
                                                        <span className="pb">Public</span>
                                                        <div className="toggle-bn"></div>
                                                        <span className="pr"> Private </span>
                                                    </div>
-                                                </a>
+                                                </button>
 
                                                 <a id="close-btn" className="btn close-1">
                                                    <BsX/>
                                                 </a>
                                             </div>
 
-                                            <div className="form-group mt-5 col-lg-5">
-                                                 <input type="text" className="form-control" placeholder="Group Name" required/>
-                                                 
-                                            </div>
-                                            <p className="test-p col-lg-10"> Configure the criteria that a user must meet in order for them to be able to 
-                                                 submit their address for this allowlist.</p>
+                                            
+                                                    <div className="form-group mt-5 col-lg-5">
+                                                        <input type="text" className="form-control" placeholder="Group Name" 
+                                                        name="group"
+                                                        id="validation"
+                                                        required
+                                                        minLength="3"
+                                                        maxLength="50"
+                                                        />
+                                                        
+                                                    </div>
+                                                    <p className="test-p col-lg-10"> Configure the criteria that a user must meet in order for them to be able to 
+                                                        submit their address for this allowlist.</p>
 
-                                            <div className="comon-input mt-5 col-lg-10">
-                                               <h5> Twitter Activity </h5>
-                                               <div className="form-group d-flex align-items-center ">
-                                                   <label> 
-                                                     Must follow account(s)
-                                                   </label>
-                                                   <div className="inpy-div">
-                                                      <input type="text" className="form-control" required/>
-                                                   </div>
-                                               </div>
+                                            <div className="public-div-show">
+                                                    <div className="comon-input mt-5 col-lg-10">
+                                                    <h5> Twitter Activity </h5>
+                                                    <div className="form-group d-flex align-items-center ">
+                                                        <label> 
+                                                            Must follow account(s)
+                                                        </label>
+                                                        <div className="inpy-div">
+                                                            <input type="text" className="form-control" 
+                                                            name="account"
+                                                            id="validation"
+                                                            required
+                                                            minLength="3"
+                                                            maxLength="50"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    </div>
+
+                                                    <div className="comon-input mt-3 col-lg-10">
+                                                    <h5> Wallet Balance </h5>
+                                                    <div className="form-group d-flex align-items-center ">
+                                                        <label> 
+                                                        Must have at least
+                                                        </label>
+                                                        <div className="inpy-div d-flex align-items-center">
+                                                            <input type="text" className="form-control" required/>
+                                                            <div className="slp">
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>ETH</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
                                             </div>
 
-                                            <div className="comon-input mt-3 col-lg-10">
-                                               <h5> Wallet Balance </h5>
-                                               <div className="form-group d-flex align-items-center ">
-                                                   <label> 
-                                                   Must have at least
-                                                   </label>
-                                                   <div className="inpy-div d-flex align-items-center">
-                                                      <input type="text" className="form-control" required/>
-                                                      <div className="slp">
-                                                           <select class="form-select" aria-label="Default select example">
-                                                                <option selected>ETH</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                      </div>
-                                                   </div>
-                                               </div>
-                                            </div>
+                                            <UploadAllowlist/>
 
                                             
                                         </div>
                                     </div>
+
+                                    
+
+                                    
 
                                     <div className="inside-div-cm col-lg-9 mx-auto d-block">
                                         <button type="button" className="btn btn-opt-add mt-2">
                                                 <BiPlus/>  Add Group
                                         </button>
                                     </div>
+
+                                   
 
                                     <div className="inside-div-cm col-lg-9 mx-auto d-block">
                                         <div className="d-md-flex align-items-center justify-content-between">
@@ -154,28 +189,28 @@ function Allowlist(){
                                                 </div>
                                                 <div className="right-pre-div d-flex align-items-center justify-content-between">
                                                     <NavLink to="/" className="btn pre-btn"> Save </NavLink>
-                                                    <NavLink to="/setpsn8" className="btn next-btn"> Next <span> <BsArrowRight/> </span> </NavLink>
+                                                    <button type='submit' className="btn next-btn">Next <span> <BsArrowRight/> </span></button>
                                                 </div>
                                         </div>
                                     </div>
 
-
-
-
-                                   
                                     
 
-
-
-
-                                </form>
+                                </ValidForm>
                             </div>
+
+
+                            
                         </div>
+
+                        
+                        
+                      
                   </div>
                 </div>
               </div>  
 
-              <button className="btn btn-danger" onClick={handleToggle}>
+              <button className="btn btn-danger" >
             Change Name
          </button>
 
