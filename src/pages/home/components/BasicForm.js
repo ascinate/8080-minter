@@ -235,7 +235,7 @@ const BasicForm=()=>{
 
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <div className="d-flex justify-content-between align-items-center">
+                                        <div className="d-md-flex justify-content-between align-items-center">
                                         <label> Metadata Base URI [Pre-Reveal] </label>
                                         <span> Leave blank for mints with instant reveal.</span>
                                         </div>
@@ -339,7 +339,7 @@ const BasicForm=()=>{
                 </div>
 
                 <div className="inside-div-cm col-lg-9 mx-auto d-block">
-                        <div className="row row-cols-1 row-cols-lg-2">
+                        <div className="row row-cols-1 row-cols-md-2">
                             <div className="col">
                                 <div className="socal-div1">
                                     <figure>
@@ -367,7 +367,7 @@ const BasicForm=()=>{
                 </div>
 
                 <div className="inside-div-cm col-lg-9 mx-auto d-block">
-                    <div className="d-md-flex align-items-center justify-content-between">
+                    <div className="d-sm-flex align-items-center justify-content-between">
                             <div className="next-div">
                                 <NavLink to="/" className="btn pre-btn"> Preview </NavLink>
                             </div>

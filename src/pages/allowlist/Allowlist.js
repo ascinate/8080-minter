@@ -27,7 +27,7 @@ function Allowlist(){
                         <p className="col-lg-9 d-block mx-auto text-center text-white"> Launch a mint dApp with a custom sale flow below. You can choose from over 
                         10 EVM-compatible chains. </p>
                         <div className="link-gopage mt-5">
-                            <ul className="list-unstyled d-md-flex justify-content-center align-items-center">
+                            <ul className="list-unstyled d-flex justify-content-center align-items-center">
                                 <li>
                                     <NavLink to="/">
                                         <div className="comon-btn-nomber text-center d-table">
@@ -127,7 +127,7 @@ function Allowlist(){
                                             <div className="public-div-show">
                                                     <div className="comon-input mt-5 col-lg-10">
                                                     <h5> Twitter Activity </h5>
-                                                    <div className="form-group d-flex align-items-center ">
+                                                    <div className="form-group d-md-flex align-items-center ">
                                                         <label> 
                                                             Must follow account(s)
                                                         </label>
@@ -145,7 +145,7 @@ function Allowlist(){
 
                                                     <div className="comon-input mt-3 col-lg-10">
                                                     <h5> Wallet Balance </h5>
-                                                    <div className="form-group d-flex align-items-center ">
+                                                    <div className="form-group d-md-flex align-items-center ">
                                                         <label> 
                                                         Must have at least
                                                         </label>

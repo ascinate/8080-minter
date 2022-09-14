@@ -18,7 +18,7 @@ const Home=()=>{
                         <p className="col-lg-9 d-block mx-auto text-center text-white"> Launch a mint dApp with a custom sale flow below. You can choose from over 
                         10 EVM-compatible chains. </p>
                         <div className="link-gopage mt-5">
-                            <ul className="list-unstyled d-md-flex justify-content-center align-items-center">
+                            <ul className="list-unstyled d-flex justify-content-center align-items-center">
                                 <li className="active">
                                     <NavLink to="/">
                                         <div className="comon-btn-nomber text-center d-table">

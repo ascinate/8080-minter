@@ -25,7 +25,7 @@ function UploadAllowlist(){
         <>
             <div className={isActivediv ? "show-main-register-allowlist" : null}>
               <div className="allow-register">
-                    <div className="d-flex align-items-center justify-content-between">
+                    <div className="d-md-flex my-5 mb-lg-0 align-items-center justify-content-between">
                         <button className="btn tog-btn p-0" onClick={handleToggleRegister}>
                             <div className="d-flex align-items-center">
                                 <span className="pb1">Allowlist Registration</span>
@@ -33,7 +33,7 @@ function UploadAllowlist(){
                             </div>
                         </button>
 
-                        <div className="form-group right-disable-div d-flex align-items-center justify-content-between">
+                        <div className="form-group right-disable-div d-md-flex align-items-center justify-content-between">
                              <p> Max Allowed Registrations </p>
                              <input type="text" className="form-control"
                              disabled={disabled}/>
