@@ -1018,26 +1018,7 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 
 
 
-@media screen and (max-width: 667px) {
-  .link-gopage li {
-    margin: 0 39px;
-  }
-  .link-gopage ul:after{
-    width: 65%;
-  }
 
-  .inside-div-cm{
-    padding: 0 30px;
-  }
-  .comon-opcity-div span{
-    margin-bottom: 10px;
-    display: block;
-  }
-  .link-gopage li h5 {
-    font-size:16px;
-  }
-
-}
 @media screen and (max-width:1180px) {
   .link-gopage ul:after{
      width: 55%;
@@ -1077,7 +1058,26 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 @media screen and (max-width:820px) {
 
 }
+
 @media screen and (max-width: 667px) {
+  .link-gopage li {
+    margin: 0 39px;
+  }
+  .link-gopage ul:after{
+    width: 59%;
+  }
+
+  .inside-div-cm{
+    padding: 0 30px;
+  }
+  .comon-opcity-div span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  .link-gopage li h5 {
+    font-size:16px;
+  }
+
   .comon-multi{
     width: 100%;
   }
@@ -1089,6 +1089,7 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
    .comon-input-div .inpy-div{
     width: 100%;
    }
+
 }
 @media screen and (max-width: 414px) {
   .navbar-brand img{
@@ -1104,6 +1105,9 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   font-size: 15px;
  }
 
+ .link-gopage ul:after {
+  width: 70%;
+  }
 }
 @media screen and (max-width: 375px) {
   .navbar-brand img{
