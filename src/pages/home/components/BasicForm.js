@@ -7,6 +7,8 @@ import { BiUpload, BiPlus, } from "react-icons/bi";
 import { BsArrowRight ,BsX } from "react-icons/bs";
 import { Button } from 'semantic-ui-react';
 import ValidForm from 'react-valid-form-component';
+import { FaDiscord } from "react-icons/fa";
+
 
 
 
@@ -28,14 +30,27 @@ const BasicForm=()=>{
       };
 
       const navRef = React.useRef(null);
+      const navRefnext = React.useRef(null);
+
+      
 
       const onAddClick = (e) => {
-        navRef.current.classList.add("show-connntect");
+        navRef.current.classList.add("show-connntect-card");
       };
     
       const onRemoveClick = (e) => {
-        navRef.current.classList.remove("show-connntect");
+        navRef.current.classList.remove("show-connntect-card");
       };
+
+
+      const onAddtwitterClick = (e) => {
+        navRefnext.current.classList.add("show-connntect-tw");
+      };
+
+      const onRemovetwitterClick = (e) => {
+        navRefnext.current.classList.remove("show-connntect-tw");
+      };
+
 
 
 
@@ -372,6 +387,25 @@ const BasicForm=()=>{
                                             Connect Discord
                                         </button>
                                     </div>
+
+
+                                    <div className="div-show-couunt-ts-cord">
+                                            <div className="d-flex align-items-center">
+                                                <figure>
+                                                    <FaDiscord/>
+                                                </figure>
+                                                <div className="liks-div d-flex align-items-center">
+                                                <h5> Nash#4218 Connected </h5> 
+                                                <button className="btn" onClick={onRemoveClick}>
+                                                    <BsX/>
+                                                </button>
+                                                </div>
+                                            </div>
+
+                                            <div className="offer-connect-1">
+                                                <p> ChainScouts NFT </p>
+                                            </div>
+                                    </div>
                                
 
                                   
@@ -383,15 +417,39 @@ const BasicForm=()=>{
                             </div>
             
                             <div className="col">
-                                <div className="socal-div1">
-                                    <figure>
-                                    <img src="images/icons8-twitter.png" alt="icon2"/>
-                                    </figure>
-            
-                                    <button type="button" className="btn comon-count1">
-                                        Connect Twitter
-                                    </button>
+                                <div className="comon-main-socal-s1" ref={navRefnext}>
+                                    <div className="socal-div1">
+                                       <div className="twite-div">
+                                            <figure>
+                                            <img src="images/icons8-twitter.png" alt="icon2"/>
+                                            </figure>
+                    
+                                            <button type="button" className="btn comon-count1" onClick={onAddtwitterClick}>
+                                                Connect Twitter
+                                            </button>
+
+                                        </div>
+
+                                        <div className="div-show-couunt-ts">
+                                            <div className="d-flex align-items-center">
+                                                <figure>
+                                                    <img src="images/icons8-twitter.png" alt="icon2"/>
+                                                </figure>
+                                                <div className="liks-div d-flex align-items-center">
+                                                <h5> Nash#4218 Connected  </h5> 
+                                                <button className="btn" onClick={onRemovetwitterClick}>
+                                                    <BsX/>
+                                                </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                   
                                 </div>
+
                             </div>
                         </div>
                 </div>
@@ -403,8 +461,8 @@ const BasicForm=()=>{
                             </div>
                             <div className="right-pre-div d-flex align-items-center justify-content-between">
                                 
-                                <Button type='button' className="btn pre-btn">Save</Button>
-                                <Button type='submit' className="btn next-btn">Next <span> <BsArrowRight/> </span></Button>
+                                <button type='button' className="btn pre-btn">Save</button>
+                                <button type='submit' className="btn next-btn">Next <span> <BsArrowRight/> </span></button>
                                 
 
                             </div>

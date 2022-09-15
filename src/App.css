@@ -1197,6 +1197,50 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   height: 25px;
   color: #fff !important;
 }
+.div-show-couunt-ts{
+  display: none;
+}
+.show-connntect-tw .div-show-couunt-ts{
+  display: block;
+}
+.show-connntect-tw .twite-div{
+  display: none;
+}
+.offer-connect-1{
+  border: dashed 1px #fff;
+  width:80%;
+  justify-content: center;
+  height:50px;
+  border-radius: 10px;
+  display: grid;
+  align-content: center;
+  margin: auto;
+}
+.offer-connect-1 p{
+  margin-bottom: 0;
+}
+.div-show-couunt-ts-cord{
+  color: #fff;
+  display: none;
+}
+.div-show-couunt-ts-cord svg{
+  width: 20px;
+  height: 20px;
+  color: #fff;
+
+}
+.show-connntect-card .div-show-couunt-ts-cord{
+  display: block;
+}
+.show-connntect-card .top-counnect-div-socl{
+  display: none;
+}
+.div-show-couunt-ts-cord figure svg{
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  margin-right: 10px;
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;
