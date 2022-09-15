@@ -4,12 +4,14 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import Darft from "./components/Draft";
 import Launched from "./components/Launched";
+import Header from "../../Header";
 
 
 const ManageMints=()=>{
     document.title ="8080 Mint - Manage Mints"
     return(
         <>
+        <Header/>
         <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
 
             <div className="comon-div">

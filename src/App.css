@@ -1288,6 +1288,27 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
  .link-gopage ul:after {
   width: 70%;
   }
+
+  .re-socal-ui li {
+    margin: 0 5px;
+  }
+  .re-socal-ui li svg{
+     width: 30px;
+     height: 30px;
+
+  }
+  .re-socal-ui li span{
+    font-size: 15px;
+  }
+  .top-register-div h2{
+    margin-top: 15px;
+  }
+  .form-check .pretty{
+    align-items: baseline;
+  }
+  .register-page .state{
+    width: 80%;
+  }
 }
 @media screen and (max-width: 375px) {
   .navbar-brand img{
