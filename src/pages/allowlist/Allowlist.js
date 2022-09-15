@@ -19,6 +19,26 @@ function Allowlist(){
     };
 
 
+    const [formValues, setFormValues] = useState([{ name: "", email : ""}]);
+
+    let handleChange = (i, e) => {
+        let newFormValues = [...formValues];
+        newFormValues[i][e.target.name] = e.target.value;
+        setFormValues(newFormValues);
+     }
+        
+    let addFormFields = () => {
+        setFormValues([...formValues, { name: "", email: "" }])
+     }
+    
+    let removeFormFields = (i) => {
+        let newFormValues = [...formValues];
+        newFormValues.splice(i, 1);
+        setFormValues(newFormValues)
+    }
+
+
+
     return(
         <>
            <Header/>
@@ -76,11 +96,7 @@ function Allowlist(){
                                                     <div className="form-group d-flex align-items-center mb-0">
                                                        
                                                        <input type="text" className="form-control" placeholder="0xymintregistration" 
-                                                        name="link"
-                                                        id="validation"
-                                                        required
-                                                        minLength="3"
-                                                        maxLength="50"
+                                                        
                                                        />
                                                        <span> .8080.tools </span>
 
@@ -113,63 +129,68 @@ function Allowlist(){
                                                 </a>
                                             </div>
 
-                                            
+                                            {formValues.map((element, index) => (
+                                              <div className="clone-main-div" key={index}>
                                                     <div className="form-group mt-5 col-lg-5">
                                                         <input type="text" className="form-control" placeholder="Group Name" 
-                                                        name="group"
-                                                        id="validation"
-                                                        required
-                                                        minLength="3"
-                                                        maxLength="50"
+                                                        
                                                         />
                                                         
                                                     </div>
                                                     <p className="test-p col-lg-10"> Configure the criteria that a user must meet in order for them to be able to 
                                                         submit their address for this allowlist.</p>
 
-                                            <div className="public-div-show">
-                                                    <div className="comon-input mt-5 col-lg-10">
-                                                    <h5> Twitter Activity </h5>
-                                                    <div className="form-group d-md-flex align-items-center ">
-                                                        <label> 
-                                                            Must follow account(s)
-                                                        </label>
-                                                        <div className="inpy-div">
-                                                            <input type="text" className="form-control" 
-                                                            name="account"
-                                                            id="validation"
-                                                            required
-                                                            minLength="3"
-                                                            maxLength="50"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    </div>
-
-                                                    <div className="comon-input mt-3 col-lg-10">
-                                                    <h5> Wallet Balance </h5>
-                                                    <div className="form-group d-md-flex align-items-center ">
-                                                        <label> 
-                                                        Must have at least
-                                                        </label>
-                                                        <div className="inpy-div d-flex align-items-center">
-                                                            <input type="text" className="form-control" required/>
-                                                            <div className="slp">
-                                                                <select class="form-select" aria-label="Default select example">
-                                                                        <option selected>ETH</option>
-                                                                        <option value="1">One</option>
-                                                                        <option value="2">Two</option>
-                                                                        <option value="3">Three</option>
-                                                                    </select>
+                                                    <div className="public-div-show">
+                                                            <div className="comon-input mt-5 col-lg-10">
+                                                            <h5> Twitter Activity </h5>
+                                                            <div className="form-group d-md-flex align-items-center ">
+                                                                <label> 
+                                                                    Must follow account(s)
+                                                                </label>
+                                                                <div className="inpy-div">
+                                                                    <input type="text" className="form-control" 
+                                                                    name="account"
+                                                                    id="validation"
+                                                                    required
+                                                                    minLength="3"
+                                                                    maxLength="50"
+                                                                    />
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                            </div>
+                                                            </div>
 
-                                            <UploadAllowlist/>
+                                                            <div className="comon-input mt-3 col-lg-10">
+                                                            <h5> Wallet Balance </h5>
+                                                            <div className="form-group d-md-flex align-items-center ">
+                                                                <label> 
+                                                                Must have at least
+                                                                </label>
+                                                                <div className="inpy-div d-flex align-items-center">
+                                                                    <input type="text" className="form-control" required/>
+                                                                    <div className="slp">
+                                                                        <select class="form-select" aria-label="Default select example">
+                                                                                <option selected>ETH</option>
+                                                                                <option value="1">One</option>
+                                                                                <option value="2">Two</option>
+                                                                                <option value="3">Three</option>
+                                                                            </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                    </div>
 
-                                            
+                                                    <UploadAllowlist/>
+
+                                                        {
+                                                            index ? 
+                                                            <button type="button"  className="button btn btn-danger remove" onClick={() => removeFormFields(index)}>Remove</button> 
+                                                            : null
+                                                        }
+
+                                               </div>
+                                            ))}
+
                                         </div>
                                     </div>
 
@@ -178,7 +199,7 @@ function Allowlist(){
                                     
 
                                     <div className="inside-div-cm col-lg-9 mx-auto d-block">
-                                        <button type="button" className="btn btn-opt-add mt-2">
+                                        <button type="button" className="btn btn-opt-add mt-2" onClick={() => addFormFields()}>
                                                 <BiPlus/>  Add Group
                                         </button>
                                     </div>
@@ -213,9 +234,7 @@ function Allowlist(){
                 </div>
               </div>  
 
-              <button className="btn btn-danger" >
-            Change Name
-         </button>
+           
 
            </div>
         </>
