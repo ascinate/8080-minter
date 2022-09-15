@@ -22,22 +22,20 @@ import Footer from './Footer';
 function App() {
 
   const { pathname } = window.location;
-  let HideHeader = window.location.pathname == '/connectwalllet' || window.location.pathname === '/register' ? null : <Header />
+  let HideHeader = window.location.pathname == '/' || window.location.pathname === '/register' ? null : <Header />
 
   return (
     <div className="App">
       <Router>
      
-            
-
            {HideHeader}
 
             <Routes>
-                <Route exact="true" path="/" element={<Home/>}/>
+                <Route exact="true" path="/" element={<ConnectWalllet/>}/>
+                <Route exact="true" path="/home" element={<Home/>}/>
                 <Route exact="true" path="/allowlist" element={<Allowlist/>}/>
                 <Route exact="true" path="/managemints" element={<ManageMints/>}/>
                 <Route exact="true" path="/pricing" element={<Pricing/>}/>
-                <Route exact="true" path="/connectwalllet" element={<ConnectWalllet/>}/>
                 <Route exact="true" path="/register" element={<Register/>}/>
                 
             </Routes>

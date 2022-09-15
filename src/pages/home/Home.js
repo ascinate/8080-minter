@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
@@ -7,6 +7,11 @@ import BasicForm from "./components/BasicForm";
 
 const Home=()=>{
     document.title ="8080 Mint - Home"
+
+    useEffect(() => {
+         
+          window.scrollTo(0, 0)
+        });
 
     return(
         <>

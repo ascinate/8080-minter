@@ -15,7 +15,7 @@ function SubHeader(){
                    </NavLink>
                     
                     
-                    <NavLink to="/" className="btn connect-bnt">
+                    <NavLink to="/home" className="btn connect-bnt">
                       <FaWallet/>   Connect Wallet <BsArrowRight/>
                      
                     </NavLink>
