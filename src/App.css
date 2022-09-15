@@ -1009,6 +1009,168 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   width: 30px;
   height: 30px;
 }
+.div-show-couunt-ts figure{
+  width: 50px;
+  margin: 0 10px 0 0;
+}
+.div-show-couunt-ts h5{
+  color: #fff;
+}
+.div-show-couunt-ts .btn{
+  color: #fff;
+}
+.div-show-couunt-ts .btn{
+  padding: 0;
+  margin-left: 10px;
+}
+.div-show-couunt-ts .btn svg{
+  width: 25px;
+  height: 25px;
+}
+.items-wallter{
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+}
+.items-wallter figure{
+  width: 180px;
+  display: block;
+  margin: auto;
+  height: 139px;
+}
+.new-fc{
+  font-size:116px !important;
+  font-family: 'futuramediumbt';
+}
+.connect-bnt{
+  background: rgb(255,169,8);
+  background: linear-gradient(176deg, rgba(255,169,8,1) 0%, rgba(123,4,128,1) 100%);
+  color: #fff !important;
+  border: none !important;
+  font-size: 20px !important;
+  border-radius: 50px !important;
+  padding: 8px 30px !important;
+}
+.rgister-tp-btn{
+  color: #fff !important;
+  font-size: 20px !important;
+}
+
+.top-register-div{
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgb(14, 123, 156);
+  padding:20px;
+}
+.top-register-div .bn-main1{
+  width: 100%;
+  height:300px;
+  overflow: hidden;
+}
+.top-register-div .bn-main1 img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.top-register-div h2{
+  color: #FFA908;
+  font-family: 'FuturaBoldfont';
+  font-size: 35px;
+}
+.top-register-div p{
+  color: #fff;
+  font-size: 22px;
+}
+.re-socal-ui li:first-child{
+  margin-left: 0;
+}
+.re-socal-ui li:last-child{
+  margin-right: 0;
+}
+.re-socal-ui li{
+  margin:0 40px;
+}
+.re-socal-ui li span{
+  color: #fff;
+}
+.re-socal-ui li svg{
+  width: 40px;
+  height: 40px;
+  color: #fff;
+}
+
+.comon-list-re-div{
+  display: inline-block;
+  background: rgb(255,255,255, 20%);
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.form-check input[type="checkbox"]{
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0,0,0,.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+.register-page-div .main-forms{
+  padding: 30px 40px;
+}
+.comon-list-re-div h2{
+  font-family: 'FuturaBoldfont';
+}
+.comon-nu-count h5{
+  color: #FFA908;
+  font-family: 'FuturaBoldfont';
+}
+.comon-nu-count h3{
+  color: #fff;
+  font-size: 40px;
+  font-family: 'FuturaBoldfont';
+}
+.right-section-1{
+  display: inline-block;
+  background: rgb(255,255,255, 30%);
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.right-section-1 .row > div{
+  padding: 20px;
+}
+.right-section-1 .row > div:first-child{
+  border-right: solid 1px #fff;
+}
+
+.form-check-label{
+  color: #fff;
+  font-size: 17px;
+}
+.form-check-label span{
+  color: #FFA908;
+}
+
+.register-page .main-forms{
+   padding:30px;
+}
+.comon-divb .form-check{
+  margin-bottom: 10px;
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;
@@ -1052,6 +1214,10 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
    }
    .right-disable-div p{
     width: 100%;
+   }
+   .connect-bnt,
+   .rgister-tp-btn{
+    font-size:  14px !important;
    }
    
 }

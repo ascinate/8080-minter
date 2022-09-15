@@ -3,8 +3,8 @@ import FilesLogo from "./FilesLogo";
 import BackgroundImg from "./BackgroundImg";
 import ProjectIcon from "./ProjectIcon";
 import { NavLink } from "react-router-dom";
-import { BiUpload, BiPlus } from "react-icons/bi";
-import { BsArrowRight } from "react-icons/bs";
+import { BiUpload, BiPlus, } from "react-icons/bi";
+import { BsArrowRight ,BsX } from "react-icons/bs";
 import { Button } from 'semantic-ui-react';
 import ValidForm from 'react-valid-form-component';
 
@@ -19,6 +19,24 @@ const BasicForm=()=>{
     const [color, setColor]= useState('#424FE6');
     const [colorSec, setSecColor]= useState('#A742E6');
     const [colorPri, setPriColor]= useState('#E64242');
+
+
+    const [isActive, setActive] = useState("false");
+
+      const handleToggle = () => {
+        setActive(!isActive);
+      };
+
+      const navRef = React.useRef(null);
+
+      const onAddClick = (e) => {
+        navRef.current.classList.add("show-connntect");
+      };
+    
+      const onRemoveClick = (e) => {
+        navRef.current.classList.remove("show-connntect");
+      };
+
 
 
 
@@ -341,15 +359,27 @@ const BasicForm=()=>{
                 <div className="inside-div-cm col-lg-9 mx-auto d-block">
                         <div className="row row-cols-1 row-cols-md-2">
                             <div className="col">
+                            <div ref={navRef}>
                                 <div className="socal-div1">
-                                    <figure>
-                                    <img src="images/icon1.png" alt="icon2"/>
-                                    </figure>
-            
-                                    <button type="button" className="btn comon-count1">
-                                        Connect Discord
-                                    </button>
+                                
+                              
+                                    <div className="top-counnect-div-socl">
+                                        <figure>
+                                        <img src="images/icon1.png" alt="icon2"/>
+                                        </figure>
+                
+                                        <button type="button" className="btn comon-count1" onClick={onAddClick}>
+                                            Connect Discord
+                                        </button>
+                                    </div>
+                               
+
+                                  
+                                      
+                                  
                                 </div>
+                            </div>
+
                             </div>
             
                             <div className="col">
