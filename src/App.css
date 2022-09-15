@@ -1055,7 +1055,21 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   color: #fff !important;
   font-size: 20px !important;
 }
-
+.form-check .pretty{
+  display: flex;
+  align-items: center;
+}
+.register-page .form-check{
+  padding-left: 0;
+}
+.register-page .state{
+   color: #fff;
+   font-size: 18px;
+   margin-left: 10px;
+}
+.register-page .state span{
+  color: #FFA908;
+}
 .top-register-div{
   display: inline-block;
   width: 100%;
@@ -1217,7 +1231,7 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
    }
    .connect-bnt,
    .rgister-tp-btn{
-    font-size:  14px !important;
+    font-size:  13px !important;
    }
    
 }
@@ -1305,4 +1319,8 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
     padding: 0 30px;
   }
 
+  .right-rgeiste-menu{
+    width: 71%;
+    display: flex;
+  }
 }

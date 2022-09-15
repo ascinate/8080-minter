@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import BasicForm from "./components/BasicForm";
+import Header from "../../Header";
 
 
 const BasicConfig=()=>{
@@ -15,6 +16,7 @@ const BasicConfig=()=>{
 
     return(
         <>
+           <Header/>
            <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
                 
                 <div className="comon-div">
@@ -25,28 +27,28 @@ const BasicConfig=()=>{
                         <div className="link-gopage mt-5">
                             <ul className="list-unstyled d-flex justify-content-center align-items-center">
                                 <li className="active">
-                                    <NavLink to="/">
+                                    
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">1</span>
                                             <h5> Basic Config </h5>
                                         </div>
-                                    </NavLink>
+                                    
                                 </li>
                                 <li>
-                                    <NavLink to="/allowlist">
+                                    
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">2</span>
                                             <h5> Allowlists </h5>
                                         </div>
-                                    </NavLink>
+                                    
                                 </li>
                                 <li>
-                                    <NavLink to="/pricing">
+                                    
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">3</span>
                                             <h5> Pricing </h5>
                                         </div>
-                                    </NavLink>
+                                    
                                 </li>
                             </ul>
                         </div>

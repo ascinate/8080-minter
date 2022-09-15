@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight,BsX } from "react-icons/bs";
 import ValidForm from 'react-valid-form-component';
+import Header from "../../Header";
+
 
 
 
@@ -19,6 +21,7 @@ function Pricing(){
 
     return(
         <>
+           <Header/>
            <div className="comon-all-body hmepage-1 allowist-p1 float-start w-100 mt-3">
               <div className={isActive ? "show-main-up-allowlist" : null}>
                 <div className="comon-div">
@@ -29,28 +32,28 @@ function Pricing(){
                         <div className="link-gopage mt-5">
                             <ul className="list-unstyled d-flex justify-content-center align-items-center">
                                 <li>
-                                    <NavLink to="/">
+                                    
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">1</span>
                                             <h5> Basic Config </h5>
                                         </div>
-                                    </NavLink>
+                                   
                                 </li>
                                 <li >
-                                    <NavLink to="/allowlist">
+                                    
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">2</span>
                                             <h5> Allowlists </h5>
                                         </div>
-                                    </NavLink>
+                                 
                                 </li>
                                 <li className="active">
-                                    <NavLink to="/pricing">
+                                    
                                         <div className="comon-btn-nomber text-center d-table">
                                             <span className="count-div">3</span>
                                             <h5> Pricing </h5>
                                         </div>
-                                    </NavLink>
+                                    
                                 </li>
                             </ul>
                         </div>

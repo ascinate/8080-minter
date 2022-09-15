@@ -20,7 +20,7 @@ function RegisterTop(){
                         Logoin to Register
                         </NavLink>
                         <NavLink to="/" className="btn connect-bnt">
-                        <FaWallet/>   Login <BsArrowRight/>
+                          Login <BsArrowRight/>
                         
                         </NavLink>
                     </div>
