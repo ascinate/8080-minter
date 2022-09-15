@@ -5,7 +5,7 @@ import { BsArrowRight, BsChevronLeft } from "react-icons/bs";
 import SubHeader from "../../SubHeader";
 
 
-const ConnectWalllet=()=>{
+const ConnectWallet=()=>{
     document.title ="8080 Mint - Connect Walllet";
     
 
@@ -82,4 +82,4 @@ const ConnectWalllet=()=>{
         </>
     )
 };
-export default ConnectWalllet;
+export default ConnectWallet;

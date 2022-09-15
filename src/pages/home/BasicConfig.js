@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import BasicForm from "./components/BasicForm";
 
 
-const Home=()=>{
+const BasicConfig=()=>{
     document.title ="8080 Mint - Home"
 
     useEffect(() => {
@@ -63,4 +63,4 @@ const Home=()=>{
         </>
     )
 };
-export default Home;
+export default BasicConfig;
