@@ -66,7 +66,7 @@ function ListRegister(){
         
                                     <div className="col">
                                     <div className="right-section-1">
-                                        <div className="row row-cols-1 row-cols-lg-2">
+                                        <div className="row row-cols-2 row-cols-lg-2">
                                             <div className="col">
                                                 <div className="comon-nu-count  text-center">
                                                     <h5> Total number 
