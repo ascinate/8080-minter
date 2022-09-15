@@ -1181,6 +1181,22 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 .comon-divb .form-check{
   margin-bottom: 10px;
 }
+.clone-main-div{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.clone-main-div .remove{
+  position: absolute;
+  right: 0;
+  top: 60px;
+  padding: 0 !important;
+}
+.clone-main-div .remove svg{
+  width: 25px;
+  height: 25px;
+  color: #fff !important;
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;

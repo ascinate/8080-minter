@@ -137,6 +137,11 @@ function Allowlist(){
                                                         />
                                                         
                                                     </div>
+                                                    {
+                                                        index ? 
+                                                        <button type="button"  className="button btn remove" onClick={() => removeFormFields(index)}> <BsX/> </button> 
+                                                        : null
+                                                    }
                                                     <p className="test-p col-lg-10"> Configure the criteria that a user must meet in order for them to be able to 
                                                         submit their address for this allowlist.</p>
 
@@ -182,11 +187,7 @@ function Allowlist(){
 
                                                     <UploadAllowlist/>
 
-                                                        {
-                                                            index ? 
-                                                            <button type="button"  className="button btn btn-danger remove" onClick={() => removeFormFields(index)}>Remove</button> 
-                                                            : null
-                                                        }
+                                                       
 
                                                </div>
                                             ))}
