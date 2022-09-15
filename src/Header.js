@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { BsXCircleFill } from "react-icons/bs";
+import { BsXCircleFill, BsArrowRight } from "react-icons/bs";
 
 
 
@@ -32,12 +32,21 @@ function Header(){
                         
                     </div>
 
-                    <button type="button" className="btn btn-aount1">
-                       <span className="icon-name1">
-                           <img src="images/metamasklogo.png" alt="icon-r"/>
-                       </span>
-                       <span> 0x2ec….9bb6 </span>
-                    </button>
+                    <div className="right-mnain-menu1">
+                    
+                            <NavLink to="/" className="btn connect-bnt lounched-btn me-3">
+                               Launched Mint <BsArrowRight/>
+                            
+                            </NavLink>
+
+                            <button type="button" className="btn btn-aount1">
+                                <span className="icon-name1">
+                                    <img src="images/metamasklogo.png" alt="icon-r"/>
+                                </span>
+                                <span> 0x2ec….9bb6 </span>
+                            </button>
+                    </div>
+                    
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
                         <FaBars/>
@@ -75,6 +84,13 @@ function Header(){
 
                         <li data-bs-dismiss="offcanvas">
                             <NavLink className="nav-link" to="/"> Marketplace</NavLink>
+                        </li>
+
+                        <li data-bs-dismiss="offcanvas">
+                            <NavLink to="/" className="btn connect-bnt">
+                                Launched Mint <BsArrowRight/>
+                            
+                            </NavLink>
                         </li>
                     
                     
