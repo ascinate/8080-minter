@@ -1307,12 +1307,13 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 .comn-mult .css-6j8wv5-Input input::placeholder{
   color: red;
 }
-.css-1hb7zxy-IndicatorsContainer
-{
+.css-1hb7zxy-IndicatorsContainer{
  display: none !important;
 }
 .comn-mult .css-g1d714-ValueContainer{
   overflow: inherit !important;
+  padding: 4px 20px;
+  font-size: 18px;
 }
 .comn-mult .css-1rhbuit-multiValue{
   position: relative;
