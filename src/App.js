@@ -12,6 +12,7 @@ import ManageMints from "./pages/manage-mints/ManageMints";
 import Pricing from './pages/pricing/Pricing';
 import Connect from './pages/connect/Connect';
 import Register from './pages/register/Register';
+import ManageAllowlist from "./pages/manage-allowlist/ManageAllowlist";
 import Footer from './Footer';
 
 
@@ -31,6 +32,8 @@ function App(props) {
                 <Route exact="true" path="/managemints" element={<ManageMints/>}/>
                 <Route exact="true" path="/pricing" element={<Pricing/>}/>
                 <Route exact="true" path="/register" element={<Register/>}/>
+                <Route exact="true" path="/manageallowlist" element={<ManageAllowlist/>}/>
+                
             </Routes>
           <Footer/>
       </Router>

@@ -1241,6 +1241,62 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   color: #fff;
   margin-right: 10px;
 }
+
+.gp-btuuon-div .btn{
+  text-transform: capitalize;
+  color:  #FFA908;
+  position: relative;
+}
+.gp-btuuon-div .btn:first-child::after{
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: grid;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #fff;
+  right:-5px;
+  top:15px;
+
+}
+.comonmulti-div > div{
+  position: relative;
+  width: 100%;
+}
+.comonmulti-div{
+  width: 50%;
+  display: inline-block;
+}
+.comonmulti-div .searchWrapper{
+  background: #fff;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 5px 20px !important;
+}
+.y-color{
+  color:  #FFA908 !important;
+  font-size:20px !important;
+  text-transform: capitalize;
+}
+.upload-md .modal-body{
+  background: #626262;
+  padding: 20px 30px;
+}
+.upload-md .modal-body h5,
+.upload-md .modal-body p{
+  color: #fff;
+}
+.upload-md .modal-body h5{
+  font-family: 'FuturaBoldfont';
+  font-size: 30px;
+}
+.comonmulti-div .searchWrapper input{
+  width: 100%;
+}
+.notFound{
+  color: #000 !important;
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;
