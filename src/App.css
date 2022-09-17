@@ -1317,10 +1317,22 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 }
 .comn-mult .css-1hwfws3{
   overflow: inherit !important;
+  padding: 2px 0px !important;
 }
 .comn-mult .css-1rhbuit-multiValue{
   position: relative;
   top:50px
+}
+
+.css-1hwfws3 .css-1rhbuit-multiValue{
+  padding: 5px 20px !important;
+  border-radius: 30px !important;
+}
+.comn-mult .css-ackcql{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 .comn-mult .css-6j8wv5-Input{
   position: absolute;
