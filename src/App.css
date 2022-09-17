@@ -1315,6 +1315,9 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   padding: 4px 20px;
   font-size: 18px;
 }
+.comn-mult .css-1hwfws3{
+  overflow: inherit !important;
+}
 .comn-mult .css-1rhbuit-multiValue{
   position: relative;
   top:50px
