@@ -8,6 +8,10 @@ import { BiEditAlt } from "react-icons/bi";
 import BlukModal from "./components/BlukModal";
 import MulitiDiv from "./components/MulitiDiv";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 import Header from "../../Header";
 
@@ -15,7 +19,7 @@ import Header from "../../Header";
 const ManageAllowlist=()=>{
     document.title ="8080 Mint - Manage Allowlist"
 
-   
+    const notify = () => toast("Save so easy!");
    
     const [upOption, setUpOtption] = useState (["Ox Option1", "OX Option2", "OX Option3",]);
     return(
@@ -25,6 +29,9 @@ const ManageAllowlist=()=>{
 
             <div className="comon-div">
               <div className="container">
+              
+              <ToastContainer />
+
                        <h1 className="main-haeding text-center text-white"> Manage Mints </h1>
                         <p className="col-lg-9 d-block mx-auto text-center text-white"> Launch a mint dApp with a custom sale flow below. You can choose from over 10 EVM-
                         compatible chains. </p>
@@ -308,7 +315,7 @@ const ManageAllowlist=()=>{
                                                     </div>
                                                     <div className="right-pre-div d-flex align-items-center justify-content-between">
                                                     
-                                                        <button type='submit' className="btn next-btn">Save <span> <BsArrowRight/> </span></button>
+                                                        <button type='submit' className="btn next-btn" onClick={notify}>Save <span> <BsArrowRight/> </span></button>
                                                     </div>
                                             </div>
                                         </div>
