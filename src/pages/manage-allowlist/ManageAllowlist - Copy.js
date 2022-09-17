@@ -104,12 +104,35 @@ const ManageAllowlist=()=>{
                                                 <div className="comon-pricing-div">
                                                         <h3>Gen 2</h3>
 
-                                                       
+                                                        <MulitiDiv/>
 
                                                         <div className="form-group">
                                                              <div className="d-flex justify-content-between">
                                                                  
-                                                                <MulitiDiv/>
+                                                              <div className="comonmulti-div">
+                                                                    <Multiselect
+                                                                    isObject={false}
+                                                                    options={upOption}
+                                                                    placeholder="Search wallet address"
+                                                                    displayValue="key"
+                                                                    selectedValues={[
+                                                                      {
+                                                                        key: 'Ox Otion1'
+                                                                      },
+                                                                      {
+                                                                        key: 'Ox Otion2'
+                                                                      }
+                                                                    ]}
+                                                                  
+                                                                    emptyRecordMsg={"Maximum nominees selected !"}
+                                                                    
+                                                                    />
+                                                                   
+                                                                <div className="show-main-deta">
+                                                                    
+                                                                </div>
+
+                                                              </div>
 
                                                                 <div className="gp-btuuon-div">
                                                                     <button type="button" className="btn">

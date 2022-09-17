@@ -1297,6 +1297,33 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
 .notFound{
   color: #000 !important;
 }
+
+.comn-mult{
+  width: 60%;
+  height: 86px;
+  position: relative;
+
+}
+.comn-mult .css-6j8wv5-Input input::placeholder{
+  color: red;
+}
+.css-1hb7zxy-IndicatorsContainer
+{
+ display: none !important;
+}
+.comn-mult .css-g1d714-ValueContainer{
+  overflow: inherit !important;
+}
+.comn-mult .css-1rhbuit-multiValue{
+  position: relative;
+  top:50px
+}
+.comn-mult .css-6j8wv5-Input{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;
