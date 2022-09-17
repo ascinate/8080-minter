@@ -121,7 +121,7 @@ const ManageAllowlist=()=>{
                                                                     value={upOption}
                                                                     emptyRecordMsg={"Maximum nominees selected !"}
                                                                     />
-                                                                    {upOption}
+                                                                   
 
                                                               </div>
 
