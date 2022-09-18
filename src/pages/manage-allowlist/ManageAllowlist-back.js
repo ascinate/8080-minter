@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { BsArrowRight, BsX } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import ValidForm from 'react-valid-form-component';
 import Multiselect from 'multiselect-react-dropdown';
 import { BiEditAlt } from "react-icons/bi";
@@ -10,7 +10,6 @@ import MulitiDiv from "./components/MulitiDiv";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 
@@ -23,17 +22,8 @@ const ManageAllowlist=()=>{
     const notify = () => toast("Save so easy!");
    
     const [upOption, setUpOtption] = useState (["Ox Option1", "OX Option2", "OX Option3",]);
-
-    const [hidden, setHiddeno1] = useState(false);
-    const [hidden1, setHiddeno2] = useState(false);
-    const [hidden2, setHiddeno3] = useState(false);
-    const [hidden3, setHiddeno4] = useState(false);
-
-    const[hideselect, setHideSelect]= useState(true);
-
     return(
         <>
-        <div className="bg"></div>
         <Header/>
         <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
 
@@ -55,18 +45,15 @@ const ManageAllowlist=()=>{
                                             <div className="comon-opcity-div">
 
                                                 <div className="comon-pricing-div">
-                                                    <div className="d-flex justify-content-between">
-                                                        <h3>Gen 1</h3>
-                                                        <button type="button" className="btn publick-btn" disabled>
-                                                                Public Mint
-                                                        </button>
-                                                    </div>
+                                                    <h3>Gen 1</h3>
 
                                                     <div className="form-group mt-4">
-                                                      
-                                                     <label> Price </label>
-                                                            
-                                                     
+                                                      <div className="d-flex justify-content-between">
+                                                            <label> Price </label>
+                                                            <button type="button" className="btn publick-btn" disabled>
+                                                               Public Mint
+                                                            </button>
+                                                      </div>
                                                       
                                                       <div className="inpy-div d-flex align-items-center">
                                                                 <input type="text" className="form-control" required/>
@@ -131,45 +118,15 @@ const ManageAllowlist=()=>{
                                                                  
                                                                 <MulitiDiv/>
 
-                                                                
-
                                                                 <div className="gp-btuuon-div">
-                                                                    <button type="button" className="btn text-uppercase" onClick={()=> setHideSelect(false)}>
+                                                                    <button type="button" className="btn">
                                                                          delete all
                                                                     </button>
-                                                                    <button type="button" className="btn text-uppercase">
+                                                                    <button type="button" className="btn">
                                                                          delete selected
                                                                     </button>
                                                                 </div>
                                                              </div>
-                                                        </div>
-
-                                                        <div className="from-group">
-                                                        { hideselect?
-                                                            <div className="manin-select-div mb-4 d-flex align-items-center">
-                                                              
-                                                                {!hidden && <button className="btn com-btn-sel" onClick={() => setHiddeno1(true)}>
-                                                                    Ox-Option 1 <BsX/>
-                                                                </button>}
-
-                                                                {!hidden1 && <button className="btn com-btn-sel" onClick={() => setHiddeno2(true)}>
-                                                                    Ox-Option 2 <BsX/>
-                                                                </button>}
-
-
-                                                                {!hidden2 && <button className="btn com-btn-sel" onClick={() => setHiddeno3(true)}>
-                                                                    Ox-Option 3 <BsX/>
-                                                                </button>}
-
-
-                                                                {!hidden3 && <button className="btn com-btn-sel" onClick={() => setHiddeno4(true)}>
-                                                                    Ox-Option 4 <BsX/>
-                                                                </button>}
-
-                                                              
-                                                                
-                                                            </div>:null
-                                                        }
                                                         </div>
                                                         
                                                         <div className="form-group">
@@ -374,10 +331,9 @@ const ManageAllowlist=()=>{
         </div>
 
 
-        <div className="content">
         <div className="modal fade upload-md" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content modalblur">
+            <div className="modal-content">
               
               <div className="modal-body">
                   <BlukModal/>
@@ -389,7 +345,6 @@ const ManageAllowlist=()=>{
               
             </div>
           </div>
-        </div>
         </div>
         </>
     )
