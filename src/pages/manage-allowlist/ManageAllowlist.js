@@ -7,6 +7,7 @@ import Multiselect from 'multiselect-react-dropdown';
 import { BiEditAlt } from "react-icons/bi";
 import BlukModal from "./components/BlukModal";
 import MulitiDiv from "./components/MulitiDiv";
+import MultiDivnext from "./components/MultiDivnext";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,7 +30,14 @@ const ManageAllowlist=()=>{
     const [hidden2, setHiddeno3] = useState(false);
     const [hidden3, setHiddeno4] = useState(false);
 
+    const [hidden4, setHiddeno5] = useState(false);
+    const [hidden5, setHiddeno6] = useState(false);
+    const [hidden6, setHiddeno7] = useState(false);
+    const [hidden7, setHiddeno8] = useState(false);
+
     const[hideselect, setHideSelect]= useState(true);
+
+    const[hideselectnext, setHideSelectNext]= useState(true);
 
     return(
         <>
@@ -261,18 +269,14 @@ const ManageAllowlist=()=>{
                                                         <div className="d-flex justify-content-between">
                                                             
                                                          <div className="comonmulti-div">
-                                                               <Multiselect
-                                                               isObject={false}
-                                                               options={upOption}
-                                                               placeholder="Search wallet address"
-                                                               displayValue="key"
-                                                               selectedValues={{upOption}}
-                                                               />
+                                                               <MultiDivnext/>
 
                                                          </div>
 
+                                                        
+
                                                            <div className="gp-btuuon-div">
-                                                               <button type="button" className="btn">
+                                                               <button type="button" className="btn" onClick={()=> setHideSelectNext(false)}>
                                                                     delete all
                                                                </button>
                                                                <button type="button" className="btn">
@@ -281,6 +285,32 @@ const ManageAllowlist=()=>{
                                                            </div>
                                                         </div>
                                                    </div>
+
+                                                   { hideselectnext?
+                                                    <div className="manin-select-div mb-4 d-flex align-items-center">
+                                                      
+                                                        {!hidden4 && <button className="btn com-btn-sel" onClick={() => setHiddeno5(true)}>
+                                                            Ox-Option 1 <BsX/>
+                                                        </button>}
+
+                                                        {!hidden5 && <button className="btn com-btn-sel" onClick={() => setHiddeno6(true)}>
+                                                            Ox-Option 2 <BsX/>
+                                                        </button>}
+
+
+                                                        {!hidden6 && <button className="btn com-btn-sel" onClick={() => setHiddeno7(true)}>
+                                                            Ox-Option 3 <BsX/>
+                                                        </button>}
+
+
+                                                        {!hidden7 && <button className="btn com-btn-sel" onClick={() => setHiddeno8(true)}>
+                                                            Ox-Option 4 <BsX/>
+                                                        </button>}
+
+                                                      
+                                                        
+                                                    </div>:null
+                                                   }
                                                    
                                                    <div className="form-group">
                                                         <div className="d-flex justify-content-between">
