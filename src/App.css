@@ -1246,6 +1246,10 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   text-transform: capitalize;
   color:  #FFA908;
   position: relative;
+  transition: all 0.5s;
+}
+.gp-btuuon-div .btn:hover{
+  color: #fff;
 }
 .gp-btuuon-div .btn:first-child::after{
   position: absolute;
@@ -1366,10 +1370,21 @@ background: linear-gradient(0deg, rgba(217,117,90,1) 13%, rgba(136,84,66,1) 48%,
   opacity: 0.8;
 }
 
-
-
-
-
+.del-img1 .invalid-field-warning{
+   display: none;
+}
+.selct-mlti{
+  width:60%;
+}
+.selct-mlti .comn-mult{
+   width: 100%;
+}
+.div-select .comn-mult .css-1rhbuit-multiValue{
+  display: none;
+}
+.modal-open .mn-allowlist1{
+  filter: blur(10px);
+}
 
 
 

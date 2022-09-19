@@ -21,6 +21,8 @@ import Header from "../../Header";
 const ManageAllowlist=()=>{
     document.title ="8080 Mint - Manage Allowlist"
 
+    const navRefnm = React.useRef(null);
+
     const notify = () => toast("Save so easy!");
    
     const [upOption, setUpOtption] = useState (["Ox Option1", "OX Option2", "OX Option3",]);
@@ -35,15 +37,24 @@ const ManageAllowlist=()=>{
     const [hidden6, setHiddeno7] = useState(false);
     const [hidden7, setHiddeno8] = useState(false);
 
+    const onHideClick = (e) => {
+        navRefnm.current.classList.add("div-select");
+      };
+
+    
+
     const[hideselect, setHideSelect]= useState(true);
 
     const[hideselectnext, setHideSelectNext]= useState(true);
+
+
+   
 
     return(
         <>
         <div className="bg"></div>
         <Header/>
-        <div className="comon-all-body hmepage-1 float-start w-100 mt-3">
+        <div className="comon-all-body hmepage-1 mn-allowlist1 float-start w-100 mt-3">
 
             <div className="comon-div">
               <div className="container">
@@ -134,10 +145,11 @@ const ManageAllowlist=()=>{
 
                                                        
 
-                                                        <div className="form-group">
+                                                        <div className="form-group del-img1">
                                                              <div className="d-flex justify-content-between">
-                                                                 
+                                                               <div className="selct-mlti" ref={navRefnm}> 
                                                                 <MulitiDiv/>
+                                                               </div> 
 
                                                                 
 
@@ -145,7 +157,7 @@ const ManageAllowlist=()=>{
                                                                     <button type="button" className="btn text-uppercase" onClick={()=> setHideSelect(false)}>
                                                                          delete all
                                                                     </button>
-                                                                    <button type="button" className="btn text-uppercase">
+                                                                    <button type="button" className="btn text-uppercase" onClick={onHideClick}>
                                                                          delete selected
                                                                     </button>
                                                                 </div>
@@ -265,7 +277,7 @@ const ManageAllowlist=()=>{
                                                         </NavLink>
                                                        </p>
                                                    </div>
-                                                   <div className="form-group">
+                                                   <div className="form-group del-img1">
                                                         <div className="d-flex justify-content-between">
                                                             
                                                          <div className="comonmulti-div">
