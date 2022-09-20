@@ -16,7 +16,7 @@ const ProjectIcon=()=>{
         <>
         <div className="box">
             <input type="file" name="iconFile" id="file-1" className="inputfile inputfile-1" 
-            onChange={handleIconUpload} />
+            onChange={handleIconUpload} accept="image/png,image/jpeg,image/gif,.jpg,.png,.jpeg,.gif"/>
             <label for="file-1">
              <span> {filechange} </span></label>
             <BiUpload/>

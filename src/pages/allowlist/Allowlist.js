@@ -8,9 +8,17 @@ import Header from "../../Header";
 
 
 
+
 function Allowlist(){
     
     document.title = "Free Mint - Allowlist"
+
+    const [twittername, setTwitterName] = useState("");
+    const [groupname, setGroupName] = useState("");
+    const [walletname, setWalletName] = useState("");
+    
+
+    const [disabled, setDisabled] = useState("false");
 
     const [isActive, setActive] = useState("false");
 
@@ -42,7 +50,7 @@ function Allowlist(){
     return(
         <>
            <Header/>
-           <div className="comon-all-body hmepage-1 allowist-p1 float-start w-100 mt-3">
+           <div className="comon-all-body hmepage-1 allowist-p1 new-allow-from float-start w-100 mt-3">
               <div className={isActive ? "show-main-up-allowlist" : null}>
                 <div className="comon-div">
                   <div className="container">
@@ -83,7 +91,7 @@ function Allowlist(){
                              <div className="main-forms">
                                 <ValidForm>
                                    
-                                    <div className="inside-div-cm col-lg-9 mx-auto d-block">
+                                    <div className="inside-div-cm top-allow-form col-lg-9 mx-auto d-block">
                                         <h3> Allowlist Registration   </h3>
                                         <p> Specify total supply, owner reserves and the mint limit per wallet. </p>
                                         <div className="comon-opcity-div">
@@ -96,6 +104,7 @@ function Allowlist(){
                                                     <div className="form-group d-flex align-items-center mb-0">
                                                        
                                                        <input type="text" className="form-control" placeholder="0xymintregistration" 
+                                                       disabled={disabled}
                                                         
                                                        />
                                                        <span> .8080.tools </span>
@@ -112,8 +121,8 @@ function Allowlist(){
                                     </div>
 
                                     <div className="inside-div-cm col-lg-9 mx-auto d-block mb-3">
-                                    
-                                        <div className="comon-opcity-div">
+                                    {formValues.map((element, index) => (
+                                        <div className="comon-opcity-div" key={index}>
 
                                             <div className="d-flex align-items-center justify-content-between">
                                                 <button className="btn tog-btn" onClick={handleToggle}>
@@ -127,21 +136,25 @@ function Allowlist(){
                                                 <a id="close-btn" className="btn close-1">
                                                    <BsX/>
                                                 </a>
+
+                                                {
+                                                    <button type="button"  className="button btn sp-remove remove" onClick={() => removeFormFields(index)}> <BsX/> </button> 
+                                                   
+                                                }
                                             </div>
 
-                                            {formValues.map((element, index) => (
-                                              <div className="clone-main-div" key={index}>
+                                            
+                                              <div className="clone-main-div">
                                                     <div className="form-group mt-5 col-lg-5">
                                                         <input type="text" className="form-control" placeholder="Group Name" 
-                                                        
+                                                        value={groupname}
+                                                        onChange={(e) => setGroupName(e.target.value)}
                                                         />
+
+                                                        
                                                         
                                                     </div>
-                                                    {
-                                                        index ? 
-                                                        <button type="button"  className="button btn remove" onClick={() => removeFormFields(index)}> <BsX/> </button> 
-                                                        : null
-                                                    }
+                                                    
                                                     <p className="test-p col-lg-10"> Configure the criteria that a user must meet in order for them to be able to 
                                                         submit their address for this allowlist.</p>
 
@@ -159,6 +172,8 @@ function Allowlist(){
                                                                     required
                                                                     minLength="3"
                                                                     maxLength="50"
+                                                                    value={twittername}
+                                                                     onChange={(e) => setTwitterName(e.target.value)}
                                                                     />
                                                                 </div>
                                                             </div>
@@ -171,7 +186,11 @@ function Allowlist(){
                                                                 Must have at least
                                                                 </label>
                                                                 <div className="inpy-div d-flex align-items-center">
-                                                                    <input type="text" className="form-control" required/>
+                                                                    <input type="text" className="form-control"
+                                                                    value={walletname}
+                                                                     onChange={(e) => setWalletName(e.target.value)}
+                                                                    
+                                                                    />
                                                                     <div className="slp">
                                                                         <select class="form-select" aria-label="Default select example">
                                                                                 <option selected>ETH</option>
@@ -187,12 +206,15 @@ function Allowlist(){
 
                                                     <UploadAllowlist/>
 
+                                               
                                                        
 
                                                </div>
-                                            ))}
+                                         
 
                                         </div>
+
+                                     ))}
                                     </div>
 
                                     

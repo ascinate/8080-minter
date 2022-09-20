@@ -19,7 +19,7 @@ const BackgroundImg=()=>{
 
         <div className="box">
             <input type="file" name="iconFile" className="inputfile inputfile-1" 
-            onChange={handleBackUpload}  />
+            onChange={handleBackUpload}  accept="image/png,image/jpeg,image/gif,.jpg,.png,.jpeg,.gif"/>
             <label for="file-1">
              <span> {fileChangeBack} </span></label>
             <BiUpload/>

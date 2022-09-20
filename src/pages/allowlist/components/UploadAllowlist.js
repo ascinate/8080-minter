@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import Multiselect from 'multiselect-react-dropdown';
+import MultipleValueTextInput from 'react-multivalue-text-input';
 
 function UploadAllowlist(){
 
@@ -61,12 +62,15 @@ function UploadAllowlist(){
                            </div>
                        </div>
                        <div className="from-group full-sel">
-                           <Multiselect
-                            isObject={false}
-                            options={upOption}
-                            showCheckbox
-                            placeholder={false}
-                           />
+                     
+                           <MultipleValueTextInput
+                                onItemAdded={(item, allItems) => console.log(`Item added: ${item}`)}
+                                onItemDeleted={(item, allItems) => console.log(`Item removed: ${item}`)}
+                            
+                                name="item-input"
+                               
+                            />
+
                        </div>
                     </div>
 
@@ -75,11 +79,12 @@ function UploadAllowlist(){
                        <div className="from-group">
                            <label> Must Have role </label>
                            <div className="comon-multi">
-                                <Multiselect
-                                isObject={false}
-                                options={discordOption}
-                                showCheckbox
-                                placeholder={false}
+                                <MultipleValueTextInput
+                                    onItemAdded={(item, allItems) => console.log(`Item added: ${item}`)}
+                                    onItemDeleted={(item, allItems) => console.log(`Item removed: ${item}`)}
+                                
+                                    name="item-input"
+                                    
                                 />
                            </div>
                        </div>
@@ -90,11 +95,12 @@ function UploadAllowlist(){
                        <div className="from-group">
                            <label> Must follow account(s) </label>
                            <div className="comon-multi">
-                                <Multiselect
-                                isObject={false}
-                                options={twitterdOption}
-                                showCheckbox
-                                placeholder={false}
+                                <MultipleValueTextInput
+                                    onItemAdded={(item, allItems) => console.log(`Item added: ${item}`)}
+                                    onItemDeleted={(item, allItems) => console.log(`Item removed: ${item}`)}
+                                
+                                    name="item-input"
+                                    
                                 />
                            </div>
                        </div>

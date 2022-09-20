@@ -58,7 +58,10 @@ const BasicConfig=()=>{
                              <div className="main-forms">
                                  <BasicForm/>
                             </div>
+                           
                         </div>
+
+                     
                   </div>
                 </div>
            </div>

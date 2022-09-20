@@ -211,6 +211,12 @@ img {
   height: 52px;
   border: solid 1px #8B0707;
 }
+.inside-div-cm .form-group .form-control:disabled, .form-control[readonly]{
+  background: #7a7a7a;
+}
+.top-allow-form .form-group .form-control:disabled, .form-control[readonly]{
+  background: #fff;
+}
 .inside-div-cm .form-group .form-control:focus{
   box-shadow: none;
 }
@@ -218,6 +224,12 @@ img {
   color: #000;
 }
 
+.new-allow-from .comon-multi{
+  width: 100%;
+}
+.new-allow-from .comon-input-div .inpy-div{
+  width: 100%;
+}
 .link-gopage li.active h5{
   color: #FFA908;
 }
@@ -1421,6 +1433,47 @@ body.modal-open .bg,
   margin: 20px;
   border-radius: 4px;
 
+}
+.new-allow-from form > div .close-1{
+  display: none;
+
+}
+.multiple-value-text-input .multiple-value-text-input-item{
+  background: #7d1c4c !important;
+  padding: 9px 16px !important;
+  border-radius: 20px;
+}
+.sp-remove{
+  color: #fff !important;
+}
+.sp-remove svg{
+  width: 25px;
+  height: 25px;
+}
+.full-sel .multiple-value-text-input label,
+.comon-input-div .multiple-value-text-input label{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.inside-div-cm p{
+  margin-top: 12px;
+}
+.full-sel .multiple-value-text-input input,
+.comon-input-div .multiple-value-text-input input{
+  background: #fff;
+  border: none !important;
+  height: 52px;
+  width: 100%;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px !important;
+  border: none !important;
+  outline: none !important;
+}
+.full-sel .multiple-value-text-input input:focus{
+  border: none !important;
+  outline: none !important;
 }
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
