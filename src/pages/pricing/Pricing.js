@@ -14,6 +14,20 @@ function Pricing(){
 
     const [isActive, setActive] = useState("false");
 
+    const [pricename, setPriceName] = useState("");
+    const [groupname, setGroupName] = useState("");
+    const [walletname, setWalletName] = useState("");
+
+
+    const [pricenamea, setPriceNameA] = useState("");
+    const [groupnamea, setGroupNameA] = useState("");
+    const [walletnamea, setWalletNameAA] = useState("");
+
+    const [pricenameb, setPriceNameB] = useState("");
+    const [groupnameb, setGroupNameB] = useState("");
+    const [walletnameb, setWalletNameBB] = useState("");
+    
+
     const handleToggle = () => {
       setActive(!isActive);
     };
@@ -75,7 +89,10 @@ function Pricing(){
                                                 <div className="form-group mt-4">
                                                    <label> Price </label>
                                                    <div className="inpy-div d-flex align-items-center">
-                                                            <input type="text" className="form-control" required/>
+                                                            <input type="text" className="form-control" 
+                                                            value={pricename}
+                                                            onChange={(e) => setPriceName(e.target.value)}
+                                                            />
                                                             <div className="slp">
                                                                 <select class="form-select" aria-label="Default select example">
                                                                         <option selected>ETH</option>
@@ -98,6 +115,8 @@ function Pricing(){
                                                             required
                                                             minLength="3"
                                                             maxLength="50"
+                                                            value={walletname}
+                                                            onChange={(e) => setWalletName(e.target.value)}
                                                             />
 
                                                         </div>
@@ -112,6 +131,8 @@ function Pricing(){
                                                             required
                                                             minLength="3"
                                                             maxLength="50"
+                                                            value={groupname}
+                                                            onChange={(e) => setGroupName(e.target.value)}
                                                             />
 
                                                         </div>
@@ -134,7 +155,9 @@ function Pricing(){
                                                     <div className="form-group mt-4">
                                                         <label> Price </label>
                                                         <div className="inpy-div d-flex align-items-center">
-                                                                <input type="text" className="form-control" required/>
+                                                                <input type="text" className="form-control" 
+                                                                value={pricenameb}
+                                                                onChange={(e) => setPriceNameB(e.target.value)}/>
                                                                 <div className="slp">
                                                                     <select class="form-select" aria-label="Default select example">
                                                                             <option selected>ETH</option>
@@ -157,6 +180,8 @@ function Pricing(){
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
+                                                                value={walletnameb}
+                                                                onChange={(e) => setWalletNameB(e.target.value)}
                                                                 />
 
                                                             </div>
@@ -171,6 +196,8 @@ function Pricing(){
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
+                                                                value={groupnameb}
+                                                                onChange={(e) => setGroupNameBB(e.target.value)}
                                                                  />
 
                                                             </div>
@@ -194,7 +221,10 @@ function Pricing(){
                                                     <div className="form-group mt-4">
                                                         <label> Price </label>
                                                         <div className="inpy-div d-flex align-items-center">
-                                                                <input type="text" className="form-control" required/>
+                                                                <input type="text" className="form-control"
+                                                                value={pricenamea}
+                                                               onChange={(e) => setPriceNameA(e.target.value)}
+                                                                />
                                                                 <div className="slp">
                                                                     <select class="form-select" aria-label="Default select example">
                                                                             <option selected>ETH</option>
@@ -217,6 +247,8 @@ function Pricing(){
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
+                                                                value={walletnamea}
+                                                                onChange={(e) => setWalletNameA(e.target.value)}
                                                                 />
 
                                                             </div>
@@ -230,7 +262,10 @@ function Pricing(){
                                                                 id="validation"
                                                                 required
                                                                 minLength="3"
-                                                                maxLength="50"/>
+                                                                maxLength="50"
+                                                                value={groupnamea}
+                                                                onChange={(e) => setGroupNameAA(e.target.value)}
+                                                                />
 
                                                             </div>
                                                         </div>
