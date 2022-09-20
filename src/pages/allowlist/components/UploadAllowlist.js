@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import Multiselect from 'multiselect-react-dropdown';
 import MultipleValueTextInput from 'react-multivalue-text-input';
+import { BsArrowRight, BsX } from "react-icons/bs";
 
 function UploadAllowlist(){
 
@@ -49,9 +50,9 @@ function UploadAllowlist(){
                            <div className="list-btn-div1">
                                <ul className="list-unstyled">
                                   <li>
-                                     <NavLink to="/">
+                                     <button type="button" className="btn p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         Bulk Upload
-                                     </NavLink>
+                                     </button>
                                   </li>
                                   <li>
                                      <NavLink to="/">
@@ -61,7 +62,7 @@ function UploadAllowlist(){
                                </ul>
                            </div>
                        </div>
-                       <div className="from-group full-sel">
+                       <div className="from-group full-sel sp-value">
                      
                            <MultipleValueTextInput
                                 onItemAdded={(item, allItems) => console.log(`Item added: ${item}`)}
@@ -78,7 +79,7 @@ function UploadAllowlist(){
                        <h5> Discord Role </h5>
                        <div className="from-group">
                            <label> Must Have role </label>
-                           <div className="comon-multi">
+                           <div className="comon-multi sp-value">
                                 <MultipleValueTextInput
                                     onItemAdded={(item, allItems) => console.log(`Item added: ${item}`)}
                                     onItemDeleted={(item, allItems) => console.log(`Item removed: ${item}`)}
@@ -94,7 +95,7 @@ function UploadAllowlist(){
                        <h5> Twitter Activity </h5>
                        <div className="from-group">
                            <label> Must follow account(s) </label>
-                           <div className="comon-multi">
+                           <div className="comon-multi sp-value">
                                 <MultipleValueTextInput
                                     onItemAdded={(item, allItems) => console.log(`Item added: ${item}`)}
                                     onItemDeleted={(item, allItems) => console.log(`Item removed: ${item}`)}
@@ -126,6 +127,9 @@ function UploadAllowlist(){
 
                </div>
             </div>
+
+
+
 
         </>
     )

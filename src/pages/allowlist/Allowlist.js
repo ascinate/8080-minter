@@ -4,6 +4,7 @@ import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight,BsX } from "react-icons/bs";
 import UploadAllowlist from "./components/UploadAllowlist";
 import ValidForm from 'react-valid-form-component';
+import BlukUploadMd from "./components/BlukUploadMd";
 import Header from "../../Header";
 
 
@@ -24,6 +25,7 @@ function Allowlist(){
 
     const handleToggle = () => {
       setActive(!isActive);
+      setDisabled(!disabled);
     };
 
 
@@ -47,8 +49,10 @@ function Allowlist(){
 
 
 
+
     return(
         <>
+        <div className="bg"></div>
            <Header/>
            <div className="comon-all-body hmepage-1 allowist-p1 new-allow-from float-start w-100 mt-3">
               <div className={isActive ? "show-main-up-allowlist" : null}>
@@ -260,6 +264,24 @@ function Allowlist(){
            
 
            </div>
+
+           <div className="content">
+            <div className="modal fade upload-md" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-content modalblur">
+                        
+                        <div className="modal-body">
+                            <BlukUploadMd/>
+                            <button type="button" className="btn next-btn ms-auto mt-3" data-bs-dismiss="modal">
+                                Upload
+                            <span> <BsArrowRight/> </span>
+                            </button>
+                        </div>
+                        
+                        </div>
+                </div>
+                </div>
+            </div>
         </>
     )
 };
