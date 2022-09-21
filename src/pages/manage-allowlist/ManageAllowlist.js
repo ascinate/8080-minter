@@ -19,7 +19,29 @@ import Header from "../../Header";
 
 
 const ManageAllowlist=()=>{
+
+
+
+
     document.title ="8080 Mint - Manage Allowlist"
+
+
+    const [allowName, setAllowName] = useState("");
+    const [limitName, setLimitName] = useState("");
+    const [priceName, setPriceName] = useState("");
+    const [blukName, setBulkName] = useState("");
+    const [maxAllowName, setMaxAllowName] = useState("");
+    const [perWalletName, setperWalletName] = useState("");
+    const [priceOneName, setPriceOneName] = useState("");
+    
+
+    
+    
+    
+    
+    
+
+
 
     const navRefnm = React.useRef(null);
 
@@ -90,7 +112,7 @@ const ManageAllowlist=()=>{
                                                       <div className="inpy-div d-flex align-items-center">
                                                                 <input type="text" className="form-control" required/>
                                                                 <div className="slp">
-                                                                    <select class="form-select" aria-label="Default select example">
+                                                                    <select class="form-select" >
                                                                             <option selected>ETH</option>
                                                                             <option value="1">One</option>
                                                                             <option value="2">Two</option>
@@ -213,9 +235,12 @@ const ManageAllowlist=()=>{
                                                         <div className="form-group mt-4">
                                                             <label> Price </label>
                                                             <div className="inpy-div d-flex align-items-center">
-                                                                    <input type="text" className="form-control" required/>
+                                                                    <input type="text" className="form-control"
+                                                                    />
                                                                     <div className="slp">
-                                                                        <select class="form-select" aria-label="Default select example">
+                                                                        <select class="form-select" 
+                                                                        value={priceOneName}
+                                                                        onChange={(e)=>setPriceOneName(e.target.value)}>
                                                                                 <option selected>ETH</option>
                                                                                 <option value="1">One</option>
                                                                                 <option value="2">Two</option>
@@ -236,6 +261,8 @@ const ManageAllowlist=()=>{
                                                                     required
                                                                     minLength="3"
                                                                     maxLength="50"
+                                                                    value={perWalletName}
+                                                                    onChange={(e)=>setperWalletName(e.target.value)}
                                                                     />
 
                                                                 </div>
@@ -250,6 +277,8 @@ const ManageAllowlist=()=>{
                                                                     required
                                                                     minLength="3"
                                                                     maxLength="50"
+                                                                    value={maxAllowName}
+                                                                    onChange={(e)=>setMaxAllowName(e.target.value)}
                                                                     />
 
                                                                 </div>
@@ -339,6 +368,8 @@ const ManageAllowlist=()=>{
                                                          required
                                                          minLength="3"
                                                          maxLength="50"
+                                                         value={blukName}
+                                                         onChange={(e)=>setBulkName(e.target.value)}
                                                          />
 
                                                    </div>
@@ -347,7 +378,9 @@ const ManageAllowlist=()=>{
                                                        <div className="inpy-div d-flex align-items-center">
                                                                <input type="text" className="form-control" required/>
                                                                <div className="slp">
-                                                                   <select class="form-select" aria-label="Default select example">
+                                                                   <select class="form-select" 
+                                                                   value={priceName}
+                                                                   onChange={(e)=>setPriceName(e.target.value)}>
                                                                            <option selected>ETH</option>
                                                                            <option value="1">One</option>
                                                                            <option value="2">Two</option>
@@ -368,6 +401,8 @@ const ManageAllowlist=()=>{
                                                                required
                                                                minLength="3"
                                                                maxLength="50"
+                                                               value={limitName}
+                                                               onChange={(e)=>setLimitName(e.target.value)}
                                                                />
 
                                                            </div>
@@ -382,6 +417,9 @@ const ManageAllowlist=()=>{
                                                                required
                                                                minLength="3"
                                                                maxLength="50"
+                                                               value={allowName}
+                                                               onChange={(e)=>setAllowName(e.target.value)}
+
                                                                />
 
                                                            </div>

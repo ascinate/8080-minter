@@ -4,7 +4,6 @@ import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import BasicForm from "./components/BasicForm";
 import Header from "../../Header";
-import FileHome from "./FileHome";
 
 
 

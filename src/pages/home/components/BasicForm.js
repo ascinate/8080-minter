@@ -8,7 +8,7 @@ import { BsArrowRight ,BsX } from "react-icons/bs";
 import { Button } from 'semantic-ui-react';
 import ValidForm from 'react-valid-form-component';
 import { FaDiscord } from "react-icons/fa";
-import FileNew from "../FileNew";
+import FileNew from "./FileNew";
 
 
 
@@ -17,6 +17,25 @@ import FileNew from "../FileNew";
 
 
 const BasicForm=()=>{
+
+    const [projectName, setProjectName] = useState("");
+    const [validName, setValidName] = useState("");
+    const [pickName, setPickName] = useState("");
+    const [impName, setImpName] = useState("");
+    const [fillValidName, setFillValidName] = useState("");
+    const [supplyName, setSupplyName] = useState("");
+    const [ownerName, setOwnerName] = useState("");
+    const [baseName, setBaseName] = useState("");
+    const [baseUiName, setBaseUiName] = useState("");
+    const [walletName, setWalletName] = useState("");
+    const [splitName, setSplitName] = useState("");
+    const [linkName, setLinkName] = useState("");
+    
+    
+    
+
+
+
 
 
     const [color, setColor]= useState('#424FE6');
@@ -95,6 +114,9 @@ const BasicForm=()=>{
                                         /* validation rules */
                                         minLength="3"
                                         maxLength="50"
+
+                                        value={projectName}
+                                        onChange={(e) => setProjectName(e.target.value)}
                                      />
                                      
                                 </div>
@@ -111,6 +133,9 @@ const BasicForm=()=>{
                                     required
                                     minLength="3"
                                     maxLength="50"
+
+                                    value={validName}
+                                     onChange={(e) => setValidName(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -130,7 +155,9 @@ const BasicForm=()=>{
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select class="form-select" 
+                                        value={pickName}
+                                     onChange={(e) => setPickName(e.target.value)}>
                                             <option selected>Pick Chain</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -141,7 +168,9 @@ const BasicForm=()=>{
                                 <div className="col-lg-12">
                                     <div className="form-group">
                                         
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select class="form-select" 
+                                        value={impName}
+                                        onChange={(e) => setImpName(e.target.value)}>
                                             <option selected>Implementation</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -170,6 +199,8 @@ const BasicForm=()=>{
                                             required
                                             minLength="3"
                                             maxLength="50"
+                                            value={fillValidName}
+                                            onChange={(e) => setFillValidName(e.target.value)}
                                             />
                                         </div>
                                     </div>
@@ -250,7 +281,10 @@ const BasicForm=()=>{
                                         id="validation"
                                         required
                                         minLength="3"
-                                        maxLength="50"/>
+                                        maxLength="50"
+                                        value={supplyName}
+                                        onChange={(e)=>setSupplyName(e.target.value)}
+                                        />
                                     </div>
                                 </div>
 
@@ -263,6 +297,8 @@ const BasicForm=()=>{
                                         required
                                         minLength="3"
                                         maxLength="50"
+                                        value={ownerName}
+                                        onChange={(e)=>setOwnerName(e.target.value)}
                                         />
                                     </div>
                                 </div>
@@ -280,6 +316,8 @@ const BasicForm=()=>{
                                         required
                                         minLength="3"
                                         maxLength="50"
+                                        value={baseName}
+                                        onChange={(e)=>setBaseName(e.target.value)}
                                         />
                                     </div>
                                 </div>
@@ -292,6 +330,8 @@ const BasicForm=()=>{
                                         required
                                         minLength="3"
                                         maxLength="50"
+                                        value={baseUiName}
+                                        onChange={(e)=>setBaseUiName(e.target.value)}
                                         />
                                     </div>
                                 </div>
@@ -322,6 +362,8 @@ const BasicForm=()=>{
                                         required
                                         minLength="3"
                                         maxLength="50"
+                                        value={walletName}
+                                        onChange={(e)=>setWalletName(e.target.value)}
                                      
                                     />
                                     </div>
@@ -332,6 +374,8 @@ const BasicForm=()=>{
                                         <label> Percentage Split </label>
                                         <input type="text" className="form-control"
                                         name="percentage"
+                                        value={splitName}
+                                        onChange={(e)=>setSplitName(e.target.value)}
                                       
                                         />
                                     </div>
@@ -363,7 +407,10 @@ const BasicForm=()=>{
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label> Project Website Link </label>
-                                            <input type="text" className="form-control" required/>
+                                            <input type="text" className="form-control"
+                                            value={linkName}
+                                            onChange={(e)=>setLinkName(e.target.value)}
+                                             />
                                         </div>
                                     </div>
                                 </div>
