@@ -8,6 +8,7 @@ import { BsArrowRight ,BsX } from "react-icons/bs";
 import { Button } from 'semantic-ui-react';
 import ValidForm from 'react-valid-form-component';
 import { FaDiscord } from "react-icons/fa";
+import FileNew from "../FileNew";
 
 
 
@@ -176,7 +177,7 @@ const BasicForm=()=>{
                                     <div className="col-lg-6">
                                         <div className="form-group">
                                             
-                                                <FilesLogo/>
+                                                <FileNew/>
                                         
                                     
                                         </div>

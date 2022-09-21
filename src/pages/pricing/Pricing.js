@@ -20,12 +20,12 @@ function Pricing(){
 
 
     const [pricenamea, setPriceNameA] = useState("");
-    const [groupnamea, setGroupNameA] = useState("");
-    const [walletnamea, setWalletNameAA] = useState("");
+    const [groupnamea, setGroupNameAA] = useState("");
+    const [walletnamea, setWalletNameA] = useState("");
 
     const [pricenameb, setPriceNameB] = useState("");
-    const [groupnameb, setGroupNameB] = useState("");
-    const [walletnameb, setWalletNameBB] = useState("");
+    const [groupnameb, setGroupNameBB] = useState("");
+    const [walletnameb, setWalletNameB] = useState("");
     
 
     const handleToggle = () => {

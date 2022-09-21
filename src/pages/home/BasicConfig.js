@@ -4,6 +4,7 @@ import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import BasicForm from "./components/BasicForm";
 import Header from "../../Header";
+import FileHome from "./FileHome";
 
 
 const BasicConfig=()=>{
@@ -57,7 +58,11 @@ const BasicConfig=()=>{
                         
                              <div className="main-forms">
                                  <BasicForm/>
+
+                                 <FileHome/>
                             </div>
+
+
                            
                         </div>
 

@@ -13,6 +13,7 @@ import Pricing from './pages/pricing/Pricing';
 import Connect from './pages/connect/Connect';
 import Register from './pages/register/Register';
 import ManageAllowlist from "./pages/manage-allowlist/ManageAllowlist";
+import FileNew from './pages/home/FileNew';
 import Footer from './Footer';
 
 
@@ -33,6 +34,7 @@ function App(props) {
                 <Route exact="true" path="/pricing" element={<Pricing/>}/>
                 <Route exact="true" path="/register" element={<Register/>}/>
                 <Route exact="true" path="/manageallowlist" element={<ManageAllowlist/>}/>
+                <Route exact="true" path="/filenew" element={<FileNew/>}/>
                 
             </Routes>
           <Footer/>

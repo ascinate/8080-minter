@@ -1501,6 +1501,10 @@ body.modal-open .bg,
 .list-btn-div1 .btn:hover{
   color:#fff !important;
 }
+
+.box{
+  
+}
 @media screen and (min-width: 1400px) {
   .link-gopage ul:after{
     width: 37%;
