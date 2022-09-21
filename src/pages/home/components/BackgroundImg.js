@@ -5,11 +5,10 @@ import $ from "jquery";
 
 class BackgroundImg extends React.Component {
 
-  
 
     componentWillMount(){
  
-
+    
 
 		$(document).ready(function(){
       var _URL = window.URL || window.webkitURL;
@@ -48,7 +47,7 @@ class BackgroundImg extends React.Component {
            
 		});
 
-
+   
         
       }
     render() {
@@ -57,6 +56,7 @@ class BackgroundImg extends React.Component {
           <div className="box">
               <section id="titelname">Background Image (1920 x 1080 )</section>
               <input type="file" id="bigimg" className="inputfile inputfile-1"
+              
               />
               <BiUpload/>
                 

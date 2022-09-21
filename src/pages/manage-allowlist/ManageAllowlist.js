@@ -33,6 +33,12 @@ const ManageAllowlist=()=>{
     const [maxAllowName, setMaxAllowName] = useState("");
     const [perWalletName, setperWalletName] = useState("");
     const [priceOneName, setPriceOneName] = useState("");
+    const [priceChoose, setPriceChoose] = useState("");
+    const [supplyAll, setSupplyAllChoose] = useState("");
+    const [perWallet, setPerWalletChoose] = useState("");
+    const [setPriceC, setsetPriceC] = useState("");
+    const [allAddress, setAllAdreessChoose] = useState("");
+    
     
 
     
@@ -58,6 +64,7 @@ const ManageAllowlist=()=>{
     const [hidden5, setHiddeno6] = useState(false);
     const [hidden6, setHiddeno7] = useState(false);
     const [hidden7, setHiddeno8] = useState(false);
+    
 
     const onHideClick = (e) => {
         navRefnm.current.classList.add("div-select");
@@ -112,7 +119,8 @@ const ManageAllowlist=()=>{
                                                       <div className="inpy-div d-flex align-items-center">
                                                                 <input type="text" className="form-control" required/>
                                                                 <div className="slp">
-                                                                    <select class="form-select" >
+                                                                    <select class="form-select" value={setPriceC}
+                                                                    onChange={(e)=>setsetPriceC(e.target.value)}>
                                                                             <option selected>ETH</option>
                                                                             <option value="1">One</option>
                                                                             <option value="2">Two</option>
@@ -133,6 +141,8 @@ const ManageAllowlist=()=>{
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
+                                                                value={perWallet}
+                                                                onChange={(e)=>setPerWalletChoose(e.target.value)}
                                                                 />
 
                                                             </div>
@@ -147,6 +157,8 @@ const ManageAllowlist=()=>{
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
+                                                                value={supplyAll}
+                                                                onChange={(e)=>setSupplyAllChoose(e.target.value)}
                                                                 />
 
                                                             </div>
@@ -229,6 +241,8 @@ const ManageAllowlist=()=>{
                                                               required
                                                               minLength="3"
                                                               maxLength="50"
+                                                              value={allAddress}
+                                                              onChange={(e)=>setAllAdreessChoose(e.target.value)}
                                                               />
 
                                                         </div>
@@ -236,6 +250,8 @@ const ManageAllowlist=()=>{
                                                             <label> Price </label>
                                                             <div className="inpy-div d-flex align-items-center">
                                                                     <input type="text" className="form-control"
+                                                                    value={priceChoose}
+                                                                        onChange={(e)=>setPriceChoose(e.target.value)}
                                                                     />
                                                                     <div className="slp">
                                                                         <select class="form-select" 
