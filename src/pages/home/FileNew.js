@@ -54,21 +54,18 @@ class FileNew extends React.Component {
                      var height=this.height;
                       $("#width").html(width);
                       $("#height").html(height);
-                     if(width > 745 || height > 536)
+                     if(width > 1920 || height > 1080)
                      {
-                       alert("Width and heigth should not be more than 745px -536px ");
-                     }                          
+                       document.getElementById("error").innerHTML = "Image should be (1920 X 1080) ";
+                     }    
+                     if(width < 1920 || height < 1080)
+                     {
+                      document.getElementById("error").innerHTML = "Image should be (1920 X 1080) ";
+                     }                       
                     };
                     img.src = _URL.createObjectURL(file);
                 }
             });
-
-
-
-
-
-
-            
 
            
 		});
@@ -86,8 +83,8 @@ class FileNew extends React.Component {
               <BiUpload/>
                 
           </div>
-          
-          <output id="output" className="text-white"></output>
+          <div id="error" className="red-color"></div>
+          <output id="output" className="red-color"></output>
           </>
       );
     }
