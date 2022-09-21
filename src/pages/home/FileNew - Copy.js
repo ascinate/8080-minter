@@ -44,24 +44,7 @@ class FileNew extends React.Component {
 
 
 
-            var _URL = window.URL || window.webkitURL;
-            $("#input").change(function (e) {
-                var file, img;
-                if ((file = this.files[0])) {
-                    img = new Image();
-                    img.onload = function () {
-                    var width=this.width;
-                     var height=this.height;
-                      $("#width").html(width);
-                      $("#height").html(height);
-                     if(width > 745 || height > 536)
-                     {
-                       alert("Width and heigth should not be more than 745px -536px ");
-                     }                          
-                    };
-                    img.src = _URL.createObjectURL(file);
-                }
-            });
+
 
 
 

@@ -7,6 +7,7 @@ import Header from "../../Header";
 import FileHome from "./FileHome";
 
 
+
 const BasicConfig=()=>{
     document.title ="8080 Mint - Home"
 
@@ -59,7 +60,7 @@ const BasicConfig=()=>{
                              <div className="main-forms">
                                  <BasicForm/>
 
-                                 <FileHome/>
+                               
                             </div>
 
 
