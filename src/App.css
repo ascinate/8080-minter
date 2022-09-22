@@ -364,6 +364,11 @@ footer p{
   padding: 30px;
   margin-top: 10px;
   border-radius: 8px;
+  
+}
+.inside-div-cm{
+  display: inline-block;
+  margin-bottom: 30px;
 }
 .btn-opt-add{
   display: table;
