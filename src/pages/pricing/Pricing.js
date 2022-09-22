@@ -33,6 +33,31 @@ function Pricing(){
     };
 
 
+    const [formstate, setFormState] = useState({
+        gen1price: "",
+        optionversion: "",
+        optionversion: "",
+        get1wallet: "",
+        get1supply: "",
+        option2version: "",
+        gen2price: "",
+        get2wallet: "",
+        get2supply: "",
+        gen3price: "",
+        option3version: "",
+        get3wallet: "",
+        get3supply: "",
+      })
+
+
+      function handleChange(evt) {
+        const value = evt.target.value;
+        setFormState({
+          ...formstate,
+          [evt.target.name]: value
+        });
+      }
+
     return(
         <>
            <Header/>
@@ -90,11 +115,14 @@ function Pricing(){
                                                    <label> Price </label>
                                                    <div className="inpy-div d-flex align-items-center">
                                                             <input type="text" className="form-control" 
-                                                            value={pricename}
-                                                            onChange={(e) => setPriceName(e.target.value)}
+                                                            value={formstate.gen1price}
+                                                            onChange={handleChange}
+                                                            name="gen1price"
                                                             />
                                                             <div className="slp">
-                                                                <select class="form-select" aria-label="Default select example">
+                                                                <select class="form-select" 
+                                                                        onChange={handleChange} value={formstate.optionversion}
+                                                                        name="optionversion">
                                                                         <option selected>ETH</option>
                                                                         <option value="1">One</option>
                                                                         <option value="2">Two</option>
@@ -110,13 +138,13 @@ function Pricing(){
                                                             <label> Limit Per Wallet </label>
 
                                                             <input type="text" className="form-control"
-                                                            name="wallet"
+                                                            name="get1wallet"
                                                             id="validation"
                                                             required
                                                             minLength="3"
                                                             maxLength="50"
-                                                            value={walletname}
-                                                            onChange={(e) => setWalletName(e.target.value)}
+                                                            value={formstate.get1wallet}
+                                                            onChange={handleChange}
                                                             />
 
                                                         </div>
@@ -126,13 +154,13 @@ function Pricing(){
                                                             <label> Max Allocated Supply </label>
 
                                                             <input type="text" className="form-control"
-                                                            name="supply"
+                                                            name="get1supply"
                                                             id="validation"
                                                             required
                                                             minLength="3"
                                                             maxLength="50"
-                                                            value={groupname}
-                                                            onChange={(e) => setGroupName(e.target.value)}
+                                                            value={formstate.get1supply}
+                                                            onChange={handleChange}
                                                             />
 
                                                         </div>
@@ -156,10 +184,15 @@ function Pricing(){
                                                         <label> Price </label>
                                                         <div className="inpy-div d-flex align-items-center">
                                                                 <input type="text" className="form-control" 
-                                                                value={pricenameb}
-                                                                onChange={(e) => setPriceNameB(e.target.value)}/>
+                                                                value={formstate.gen2price}
+                                                                onChange={handleChange}
+                                                                name="gen2price"
+                                                               />
                                                                 <div className="slp">
-                                                                    <select class="form-select" aria-label="Default select example">
+                                                                    <select class="form-select" 
+                                                                    onChange={handleChange} 
+                                                                    value={formstate.option2version}
+                                                                    name="option2version">
                                                                             <option selected>ETH</option>
                                                                             <option value="1">One</option>
                                                                             <option value="2">Two</option>
@@ -175,13 +208,13 @@ function Pricing(){
                                                                 <label> Limit Per Wallet </label>
 
                                                                 <input type="text" className="form-control"
-                                                                name="walletnext"
+                                                                name="get2wallet"
                                                                 id="validation"
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
-                                                                value={walletnameb}
-                                                                onChange={(e) => setWalletNameB(e.target.value)}
+                                                                value={formstate.get2wallet}
+                                                                onChange={handleChange}
                                                                 />
 
                                                             </div>
@@ -191,13 +224,13 @@ function Pricing(){
                                                                 <label> Max Allocated Supply </label>
 
                                                                 <input type="text" className="form-control"
-                                                                name="supplynext"
+                                                                name="get2supply"
                                                                 id="validation"
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
-                                                                value={groupnameb}
-                                                                onChange={(e) => setGroupNameBB(e.target.value)}
+                                                                value={formstate.get2supply}
+                                                                onChange={handleChange}
                                                                  />
 
                                                             </div>
@@ -222,11 +255,15 @@ function Pricing(){
                                                         <label> Price </label>
                                                         <div className="inpy-div d-flex align-items-center">
                                                                 <input type="text" className="form-control"
-                                                                value={pricenamea}
-                                                               onChange={(e) => setPriceNameA(e.target.value)}
+                                                                value={formstate.gen3price}
+                                                                onChange={handleChange}
+                                                                name="gen3price"
                                                                 />
                                                                 <div className="slp">
-                                                                    <select class="form-select" aria-label="Default select example">
+                                                                    <select class="form-select" 
+                                                                    onChange={handleChange} 
+                                                                    value={formstate.option3version}
+                                                                    name="option3version">
                                                                             <option selected>ETH</option>
                                                                             <option value="1">One</option>
                                                                             <option value="2">Two</option>
@@ -242,13 +279,13 @@ function Pricing(){
                                                                 <label> Limit Per Wallet </label>
 
                                                                 <input type="text" className="form-control"
-                                                                name="walletnextone"
+                                                                name="get3wallet"
                                                                 id="validation"
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
-                                                                value={walletnamea}
-                                                                onChange={(e) => setWalletNameA(e.target.value)}
+                                                                value={formstate.get3wallet}
+                                                                onChange={handleChange}
                                                                 />
 
                                                             </div>
@@ -258,13 +295,13 @@ function Pricing(){
                                                                 <label> Max Allocated Supply </label>
 
                                                                 <input type="text" className="form-control"
-                                                                name="supplynexttwo"
+                                                                name="get3supply"
                                                                 id="validation"
                                                                 required
                                                                 minLength="3"
                                                                 maxLength="50"
-                                                                value={groupnamea}
-                                                                onChange={(e) => setGroupNameAA(e.target.value)}
+                                                                value={formstate.get3supply}
+                                                                onChange={handleChange}
                                                                 />
 
                                                             </div>
