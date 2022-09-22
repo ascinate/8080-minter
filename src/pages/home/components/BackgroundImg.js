@@ -5,7 +5,14 @@ import $ from "jquery";
 
 class BackgroundImg extends React.Component {
 
+  constructor(props) {
+    super(props);
+   this.state = {name: "Background Image (1920 x 1080 )"}
 
+  }
+   changeTitle = (e) =>{
+      this.setState({name: e.target.value});
+    }
     componentWillMount(){
  
     
@@ -23,11 +30,11 @@ class BackgroundImg extends React.Component {
                 $("#height").html(height);
                if(width > 1920 || height > 1080)
                {
-                document.getElementById("errormn").innerHTML = "Image should be (1920 X 1080) ";
+                document.getElementById("errormn").innerHTML = "Image should be (1920px X 1080px) ";
                }  
                if(width < 1920 || height < 1080)
                      {
-                      document.getElementById("errormn").innerHTML = "Image should be (1920 X 1080) ";
+                      document.getElementById("errormn").innerHTML = "Image should be (1920px X 1080px) ";
                 }                           
               };
               img.src = _URL.createObjectURL(file);
@@ -54,9 +61,9 @@ class BackgroundImg extends React.Component {
       return (
           <>
           <div className="box">
-              <section id="titelname">Background Image (1920 x 1080 )</section>
+              <section id="titelname">{this.state.name}</section>
               <input type="file" id="bigimg" className="inputfile inputfile-1"
-              
+              onChange={this.changeTitle}
               />
               <BiUpload/>
                 

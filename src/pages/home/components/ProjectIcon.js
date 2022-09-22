@@ -6,11 +6,21 @@ import $ from "jquery";
 
 class ProjectIcon extends React.Component {
 
+  constructor(props) {
+    super(props);
+   this.state = {name: "Project Icon (500x500)"}
+
+  }
+   changeTitle = (e) =>{
+      this.setState({name: e.target.value});
+    }
+
   componentWillMount(){
  
 
 
 		$(document).ready(function(){
+      
       var _URL = window.URL || window.webkitURL;
       $("#inputnew").change(function (e) {
           var file, img;
@@ -23,11 +33,11 @@ class ProjectIcon extends React.Component {
                 $("#height").html(height);
                if(width > 500 || height > 500)
                {
-                document.getElementById("errorn").innerHTML = "Image should be (500 X 500) ";
+                document.getElementById("errorn").innerHTML = "Image should be (500px X 500px) ";
                }  
                if(width < 500 || height < 500)
                      {
-                      document.getElementById("errorn").innerHTML = "Image should be (500 X 500) ";
+                      document.getElementById("errorn").innerHTML = "Image should be (500px X 500px) ";
                 }                           
               };
               img.src = _URL.createObjectURL(file);
@@ -51,11 +61,13 @@ class ProjectIcon extends React.Component {
         
       }
     render() {
+      
       return (
           <>
           <div className="box">
-              <sectionn id="outputnamen">Project Icon (500x500)</sectionn>
+              <sectionn id="outputnamen">{this.state.name}</sectionn>
               <input type="file" id="inputnew" className="inputfile inputfile-1"
+              onChange={this.changeTitle}
               />
               <BiUpload/>
                 
