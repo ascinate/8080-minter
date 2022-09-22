@@ -11,7 +11,7 @@ function Launched(){
         <>
         {
             lonchedData.map((curElem) =>{
-                const { id, titel, link, owner , url , minted , editlink, colletion, balance} = curElem;
+                const { id, titel, link, owner , url ,  minted , editlink, colletion, balance} = curElem;
                 return(
                     <>
                    

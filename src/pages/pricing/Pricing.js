@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { BiUpload, BiPlus } from "react-icons/bi";
 import { BsArrowRight,BsX } from "react-icons/bs";
 import ValidForm from 'react-valid-form-component';
+import PriceData from "./components/PriceApi";
 import Header from "../../Header";
 
 
@@ -13,6 +14,8 @@ function Pricing(){
     document.title = "Free Mint - Pricing"
 
     const [isActive, setActive] = useState("false");
+
+
 
     const [pricename, setPriceName] = useState("");
     const [groupname, setGroupName] = useState("");
@@ -28,11 +31,7 @@ function Pricing(){
     const [walletnameb, setWalletNameB] = useState("");
     
 
-    const handleToggle = () => {
-      setActive(!isActive);
-    };
-
-
+  
     const [formstate, setFormState] = useState({
         gen1price: "",
         optionversion: "",
@@ -50,14 +49,13 @@ function Pricing(){
       })
 
 
-      function handleChange(evt) {
-        const value = evt.target.value;
-        setFormState({
-          ...formstate,
-          [evt.target.name]: value
-        });
-      }
 
+      
+
+    const [ priceAllData , setPriceAllDataData] =useState(PriceData);
+    console.log(priceAllData);
+
+ 
     return(
         <>
            <Header/>
@@ -100,224 +98,97 @@ function Pricing(){
                              <div className="blur"></div>
                         
                              <div className="main-forms">
-                                <ValidForm>
+                                <ValidForm >
                                    
-                                    <div className="inside-div-cm col-lg-9 mx-auto d-block">
+
+                                    <div className="inside-div-cm col-lg-9 mx-auto d-block" >
                                         <h3> Pricing   </h3>
                                         <p> Configure pricing across allowlists. </p>
-                                        <div className="comon-opcity-div">
+                                        
 
-                                            <div className="comon-pricing-div">
-                                                <h3>Gen 1</h3>
-                                                <h5> Configure the pricing for this list. </h5>
 
-                                                <div className="form-group mt-4">
-                                                   <label> Price </label>
-                                                   <div className="inpy-div d-flex align-items-center">
-                                                            <input type="text" className="form-control" 
-                                                            value={formstate.gen1price}
-                                                            onChange={handleChange}
-                                                            name="gen1price"
-                                                            />
-                                                            <div className="slp">
-                                                                <select class="form-select" 
-                                                                        onChange={handleChange} value={formstate.optionversion}
-                                                                        name="optionversion">
-                                                                        <option selected>ETH</option>
-                                                                        <option value="1">One</option>
-                                                                        <option value="2">Two</option>
-                                                                        <option value="3">Three</option>
-                                                                    </select>
-                                                            </div>
-                                                    </div>
-                                                </div>
+                                        {
+                                            priceAllData.map((curElem) =>{
+                                                const { id, titel,namefill, idvalid, pricelable, subtitel , walletlable , maxlable } = curElem;
+                                                const fieldName = `friends[${curElem}]`
+                                                return(
+                                                    <>
+                                                    <fieldset name={fieldName} key={fieldName}>
+                                                       
+                                                        <div className="comon-opcity-div">
 
-                                                <div className="row row-cols-1 row-cols-lg-2">
-                                                    <div className="col">
-                                                        <div className="form-group">
-                                                            <label> Limit Per Wallet </label>
-
-                                                            <input type="text" className="form-control"
-                                                            name="get1wallet"
-                                                            id="validation"
-                                                            required
-                                                            minLength="3"
-                                                            maxLength="50"
-                                                            value={formstate.get1wallet}
-                                                            onChange={handleChange}
-                                                            />
-
-                                                        </div>
-                                                    </div>
-                                                    <div className="col">
-                                                        <div className="form-group">
-                                                            <label> Max Allocated Supply </label>
-
-                                                            <input type="text" className="form-control"
-                                                            name="get1supply"
-                                                            id="validation"
-                                                            required
-                                                            minLength="3"
-                                                            maxLength="50"
-                                                            value={formstate.get1supply}
-                                                            onChange={handleChange}
-                                                            />
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                 
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="inside-div-cm col-lg-9 mx-auto d-block mb-3">
-                                    
-                                        <div className="comon-opcity-div">
-
-                                            <div className="comon-pricing-div">
-                                                    <h3>Gen 2</h3>
-                                                    <h5> Configure the pricing for this list. </h5>
-
-                                                    <div className="form-group mt-4">
-                                                        <label> Price </label>
-                                                        <div className="inpy-div d-flex align-items-center">
-                                                                <input type="text" className="form-control" 
-                                                                value={formstate.gen2price}
-                                                                onChange={handleChange}
-                                                                name="gen2price"
-                                                               />
-                                                                <div className="slp">
-                                                                    <select class="form-select" 
-                                                                    onChange={handleChange} 
-                                                                    value={formstate.option2version}
-                                                                    name="option2version">
-                                                                            <option selected>ETH</option>
-                                                                            <option value="1">One</option>
-                                                                            <option value="2">Two</option>
-                                                                            <option value="3">Three</option>
-                                                                        </select>
+                                                                <div className="comon-pricing-div">
+                                                                    <h3>{titel}</h3>
+                                                                    <h5> {subtitel} </h5>
+                                                                    <fieldset >
+                                                                        <div className="form-group mt-4">
+                                                                        <label> {pricelable} </label>
+                                                                            <div className="inpy-div d-flex align-items-center">
+                                                                                    <input type="text" className="form-control" 
+                                                                                    id={idvalid}
+                                                                                    name={namefill}
+                                                                                    required
+                                                                                    minLength="3"
+                                                                                    maxLength="50"
+                                                                                    value={priceAllData[0].price}
+                                                                                    />
+                                                                                    <div className="slp">
+                                                                                        <select class="form-select" 
+                                                                                        value={priceAllData[0].option} 
+                                                                                                >
+                                                                                                <option selected>ETH</option>
+                                                                                                <option value="1">One</option>
+                                                                                                <option value="2">Two</option>
+                                                                                                <option value="3">Three</option>
+                                                                                            </select>
+                                                                                    </div>
+                                                                            </div>
+                                                                        </div>
+                        
+                                                                        <div className="row row-cols-1 row-cols-lg-2">
+                                                                            <div className="col">
+                                                                                <div className="form-group">
+                                                                                    <label> {walletlable}</label>
+                        
+                                                                                    <input type="text" className="form-control"
+                                                                                    name={namefill}
+                                                                                    id={idvalid}
+                                                                                    required
+                                                                                    minLength="3"
+                                                                                    maxLength="50"
+                                                                                    value={priceAllData[0].wallte}
+                                                                                    />
+                        
+                                                                                </div>
+                                                                            </div>
+                                                                            <div className="col">
+                                                                                <div className="form-group">
+                                                                                    <label> {maxlable} </label>
+                        
+                                                                                    <input type="text" className="form-control"
+                                                                                    name={namefill}
+                                                                                    id={idvalid}
+                                                                                    required
+                                                                                    minLength="3"
+                                                                                    maxLength="50"
+                                                                                    value={priceAllData[0].maxvalue} 
+                                                                                    />
+                        
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </fieldset>
+                                                                    
                                                                 </div>
+            
                                                         </div>
-                                                    </div>
 
-                                                    <div className="row row-cols-1 row-cols-lg-2">
-                                                        <div className="col">
-                                                            <div className="form-group">
-                                                                <label> Limit Per Wallet </label>
-
-                                                                <input type="text" className="form-control"
-                                                                name="get2wallet"
-                                                                id="validation"
-                                                                required
-                                                                minLength="3"
-                                                                maxLength="50"
-                                                                value={formstate.get2wallet}
-                                                                onChange={handleChange}
-                                                                />
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="col">
-                                                            <div className="form-group">
-                                                                <label> Max Allocated Supply </label>
-
-                                                                <input type="text" className="form-control"
-                                                                name="get2supply"
-                                                                id="validation"
-                                                                required
-                                                                minLength="3"
-                                                                maxLength="50"
-                                                                value={formstate.get2supply}
-                                                                onChange={handleChange}
-                                                                 />
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            
-                                        </div>
+                                                    </fieldset>
+                                                    </>
+                                                );
+                                            })
+                                        }
                                     </div>
-
-
-                                    <div className="inside-div-cm col-lg-9 mx-auto d-block mb-3">
-                                    
-                                        <div className="comon-opcity-div">
-
-                                            <div className="comon-pricing-div">
-                                                    <h3>Gen 3</h3>
-                                                    <h5> Configure the pricing for this list. </h5>
-
-                                                    <div className="form-group mt-4">
-                                                        <label> Price </label>
-                                                        <div className="inpy-div d-flex align-items-center">
-                                                                <input type="text" className="form-control"
-                                                                value={formstate.gen3price}
-                                                                onChange={handleChange}
-                                                                name="gen3price"
-                                                                />
-                                                                <div className="slp">
-                                                                    <select class="form-select" 
-                                                                    onChange={handleChange} 
-                                                                    value={formstate.option3version}
-                                                                    name="option3version">
-                                                                            <option selected>ETH</option>
-                                                                            <option value="1">One</option>
-                                                                            <option value="2">Two</option>
-                                                                            <option value="3">Three</option>
-                                                                        </select>
-                                                                </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="row row-cols-1 row-cols-lg-2">
-                                                        <div className="col">
-                                                            <div className="form-group">
-                                                                <label> Limit Per Wallet </label>
-
-                                                                <input type="text" className="form-control"
-                                                                name="get3wallet"
-                                                                id="validation"
-                                                                required
-                                                                minLength="3"
-                                                                maxLength="50"
-                                                                value={formstate.get3wallet}
-                                                                onChange={handleChange}
-                                                                />
-
-                                                            </div>
-                                                        </div>
-                                                        <div className="col">
-                                                            <div className="form-group">
-                                                                <label> Max Allocated Supply </label>
-
-                                                                <input type="text" className="form-control"
-                                                                name="get3supply"
-                                                                id="validation"
-                                                                required
-                                                                minLength="3"
-                                                                maxLength="50"
-                                                                value={formstate.get3supply}
-                                                                onChange={handleChange}
-                                                                />
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-
-                                    
-
-                                    
-
-                                 
 
                                    
 
