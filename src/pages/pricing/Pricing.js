@@ -17,41 +17,6 @@ function Pricing(){
 
 
 
-    const [pricename, setPriceName] = useState("");
-    const [groupname, setGroupName] = useState("");
-    const [walletname, setWalletName] = useState("");
-
-
-    const [pricenamea, setPriceNameA] = useState("");
-    const [groupnamea, setGroupNameAA] = useState("");
-    const [walletnamea, setWalletNameA] = useState("");
-
-    const [pricenameb, setPriceNameB] = useState("");
-    const [groupnameb, setGroupNameBB] = useState("");
-    const [walletnameb, setWalletNameB] = useState("");
-    
-
-  
-    const [formstate, setFormState] = useState({
-        gen1price: "",
-        optionversion: "",
-        optionversion: "",
-        get1wallet: "",
-        get1supply: "",
-        option2version: "",
-        gen2price: "",
-        get2wallet: "",
-        get2supply: "",
-        gen3price: "",
-        option3version: "",
-        get3wallet: "",
-        get3supply: "",
-      })
-
-
-
-      
-
     const [ priceAllData , setPriceAllDataData] =useState(PriceData);
     console.log(priceAllData);
 
